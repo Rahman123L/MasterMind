@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Mind</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/mm.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body class="bg-[#EBF4F6]">
+
+    <!-- Navbar Start -->
+    <nav class="fixed top-0 z-50 w-full bg-white py-3 md:py-5 px-4 md:px-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="sm:hidden">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                    </svg>
+                </button>
+                <div class="hidden sm:flex justify-normal items-center gap-2">
+                    <div class="w-10 h-10 object-cover">
+                        <img class="w-full h-full object-contain" src="../images/mm.svg" alt="">
+                    </div>
+                    <h1 class="text-lg text-gray-600 font-bold"><span class="text-[#088395] font-bold">M</span>aster <span class="text-[#37B7C3] font-bold">M</span>ind</h1>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center ms-3">
+                <div>
+                    <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                    <img class="w-8 md:w-10 h-8 md:h-10 rounded-full" src="../images/avatar.jpg" alt="user photo">
+                    </button>
+                </div>
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+                    <div class="px-4 py-3" role="none">
+                    <p class="text-sm text-gray-900 dark:text-white" role="none">
+                        Neil Sims
+                    </p>
+                    <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                        neil.sims@flowbite.com
+                    </p>
+                    </div>
+                    <ul class="py-1" role="none">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Earnings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Sign out</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Sidebar Start -->
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen mt-14 md:mt-20 px-6 py-4 overflow-hidden overflow-y-scroll transition transform duration-700 -translate-x-full bg-white sm:translate-x-0" aria-label="Sidebar">
+        <a href="dashboard.html">
+            <button class="w-full py-2 flex items-center gap-3 group transform transition duration-500 rounded-lg">
+                <svg class="w-[18px] md:w-5 stroke-[1.5] transform transition duration-300 stroke-gray-500 group-hover:stroke-gray-700 group-focus:stroke-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 22L2 22" stroke-linecap="round"/>
+                    <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
+                    <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
+                    <path d="M4 22V9.5" stroke-linecap="round"/>
+                    <path d="M20 9.5V13.5M20 22V17.5" stroke-linecap="round"/>
+                    <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round"/>
+                    <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/>
+                </svg>
+                <h1 class="text-sm md:text-base font-semibold transform transition duration-300 text-gray-500 group-hover:text-gray-700 group-focus:text-black">Dashboard</h1>
+            </button>
+        </a>
+    </aside>
+    <!-- Sidebar End -->
+    
+    <!-- Content Start -->
+    <div class="p-4 sm:ml-64">
+
+    </div>  
+    <!-- Content End -->
+
+    <!-- Script Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script End -->
+     
+</body>
+</html>
