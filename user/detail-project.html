@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Mind</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="images/mm.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body class="bg-[#EBF4F6]">
+
+    <!-- Navbar Start -->
+    <nav class="fixed top-0 z-50 w-full bg-white py-3 md:py-5 px-4 md:px-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="md:hidden">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex justify-normal items-center gap-2">
+                    <div class="w-[36px] lg:w-10 h-[36px] lg:h-10 object-cover">
+                        <img class="w-full h-full object-contain" src="../images/mm.svg">
+                    </div>
+                    <h1 class="md:text-sm lg:text-lg text-gray-600 font-bold"><span class="text-[#088395] font-bold">M</span>aster <span class="text-[#37B7C3] font-bold">M</span>ind</h1>
+                </div>
+            </div>
+            <button type="button" class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-gray-500 overflow-hidden bg-cover rounded-full" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+            </button>
+            <div class="z-50 hidden bg-black rounded" id="dropdown-user">
+                <!-- Profile -->
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Sidebar Start -->
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen mt-14 md:mt-[76px] lg:mt-20 px-6 py-4 scrollbar-y transition transform duration-700 -translate-x-full bg-white md:translate-x-0" aria-label="Sidebar">
+        <div class="grid gap-3 md:gap-5">
+            <a href="dashboard.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 22L2 22" stroke-linecap="round"/>
+                        <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
+                        <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
+                        <path d="M4 22V9.5" stroke-linecap="round"/>
+                        <path d="M20 9.5V13.5M20 22V17.5" stroke-linecap="round"/>
+                        <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round"/>
+                        <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Dashboard</h1>
+                </button>
+            </a>
+            <a href="project.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.35912 7.02646 8.43977 6.72546 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.669 7.04708 21.565 7.81304 21.2766 9" stroke-linecap="round"/>
+                        <path d="M3.27222 16.647C3.87647 18.9021 4.17859 20.0296 4.86351 20.7609C5.40432 21.3383 6.10421 21.7424 6.87466 21.922C7.85044 22.1495 8.97798 21.8474 11.2331 21.2432C13.4881 20.6389 14.6157 20.3368 15.347 19.6519C15.8399 19.1902 16.2065 18.6126 16.415 17.9741M8.51621 6.44531C8.16368 6.53646 7.77741 6.63996 7.35077 6.75428C5.09569 7.35853 3.96815 7.66065 3.23687 8.34557C2.65945 8.88638 2.25537 9.58627 2.07573 10.3567C1.91482 11.0468 2.01883 11.8129 2.30728 13" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Projects</h1>
+                </button>
+            </a>
+            <hr class="h-px bg-gray-200">
+            <a href="../index.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 12L6 12M6 12L8 14M6 12L8 10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 21.9827C10.4465 21.9359 9.51995 21.7626 8.87865 21.1213C8.11027 20.3529 8.01382 19.175 8.00171 17M16 21.9983C18.175 21.9862 19.3529 21.8897 20.1213 21.1213C21 20.2426 21 18.8284 21 16V14V10V8C21 5.17157 21 3.75736 20.1213 2.87868C19.2426 2 17.8284 2 15 2H14C11.1715 2 9.75733 2 8.87865 2.87868C8.11027 3.64706 8.01382 4.82497 8.00171 7" stroke-linecap="round"/>
+                        <path d="M3 9.5V14.5C3 16.857 3 18.0355 3.73223 18.7678C4.46447 19.5 5.64298 19.5 8 19.5M3.73223 5.23223C4.46447 4.5 5.64298 4.5 8 4.5" stroke-linecap="round"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Logout</h1>
+                </button>
+            </a>
+        </div>
+    </aside>
+    <!-- Sidebar End -->
+    
+    <!-- Content Start -->
+    <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64 space-y-5 md:space-y-10">
+        <!-- Detail Card Start -->
+        <div class="w-full sm:w-[80%] md:w-[70%] bg-transparent mx-auto grid grid-cols-1 lg:grid-cols-2 place-items-center gap-5 rounded-xl">
+            <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                <img class="w-full h-full object-contain" src="../images/test.png">
+            </div>
+            <div class="relative p-6 rounded-xl space-y-4 h-max">
+                <div class="absolute right-0 top-0 bg-[#37B7C3] py-1.5 md:py-2 px-4 md:px-5 rounded-bl-xl rounded-se-xl">
+                    <h1 class="text-xs md:text-sm text-white font-medium uppercase">POPULAR</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="flex justify-center items-center bg-[#37B7C3] p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 md:w-7 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg>
+                        </div>
+                        <div class="text-sm md:text-base text-black font-medium capitalize">Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="flex justify-normal items-center">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-gray-600 font-medium">10 Reviews</h1>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                </div>
+                <hr class="h-px bg-gray-200">
+                <div class="flex justify-normal items-center gap-2">
+                    <h1 class="text-xs md:text-sm text-slate-600 font-medium">Rp. 70.000</h1>
+                    <span class="inline-block w-2 md:w-3 h-[3px] bg-gray-500 rounded-full"></span>
+                    <h1 class="text-xs md:text-sm text-slate-600 font-medium">Rp. 150.000</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Detail Card End -->
+
+        <!-- Testimonials Start -->
+        <section class="w-full sm:w-[80%] md:w-[90%] p-3 md:p-0 mx-auto space-y-8 md:space-y-14">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                    </svg>
+                    <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                        <img class="w-full h-full object-contain" src="../images/test.png">
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                    </svg>
+                    <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                        <img class="w-full h-full object-contain" src="../images/test.png">
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                    </svg>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                    </svg>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials End -->
+    </section>
+    <!-- Content End -->
+
+    <!-- Script Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script End -->
+     
+</body>
+</html>
