@@ -28,7 +28,7 @@
 
 .scrollbar-y {
     overflow-y: scroll;
-    height: 40rem;
+    height: 65rem;
 }
 
 .scrollbar-y::-webkit-scrollbar {
@@ -43,5 +43,4 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
-  
   
