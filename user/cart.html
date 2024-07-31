@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Mind</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="images/mm.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body class="bg-[#EBF4F6]">
+
+    <!-- Navbar Start -->
+    <nav class="fixed top-0 z-50 w-full bg-white py-3 md:py-5 px-4 md:px-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="md:hidden">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex justify-normal items-center gap-2">
+                    <div class="w-[36px] lg:w-10 h-[36px] lg:h-10 object-cover">
+                        <img class="w-full h-full object-contain" src="../images/mm.svg">
+                    </div>
+                    <h1 class="md:text-sm lg:text-lg text-gray-600 font-bold"><span class="text-[#088395] font-bold">M</span>aster <span class="text-[#37B7C3] font-bold">M</span>ind</h1>
+                </div>
+            </div>
+            <div class="flex justify-normal items-center gap-5 md:gap-10">
+                <a href="cart.html" class="relative">
+                    <svg class="w-[18px] lg:w-6 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                        <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                        <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                    </svg>
+                    <div class="absolute top-0 right-0 bg-red-500 p-1 lg:p-[6px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                </a>
+                <button type="button" class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-gray-500 overflow-hidden bg-cover rounded-full" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                    <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                </button>
+            </div>
+            <div class="z-50 hidden bg-black rounded" id="dropdown-user">
+                <!-- Profile -->
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Sidebar Start -->
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen mt-14 md:mt-[76px] lg:mt-20 px-6 py-4 scrollbar-y transition transform duration-700 -translate-x-full bg-white md:translate-x-0" aria-label="Sidebar">
+        <div class="grid gap-3 md:gap-5">
+            <a href="dashboard.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 22L2 22" stroke-linecap="round"/>
+                        <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
+                        <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
+                        <path d="M4 22V9.5" stroke-linecap="round"/>
+                        <path d="M20 9.5V13.5M20 22V17.5" stroke-linecap="round"/>
+                        <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round"/>
+                        <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Dashboard</h1>
+                </button>
+            </a>
+            <a href="project.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.35912 7.02646 8.43977 6.72546 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.669 7.04708 21.565 7.81304 21.2766 9" stroke-linecap="round"/>
+                        <path d="M3.27222 16.647C3.87647 18.9021 4.17859 20.0296 4.86351 20.7609C5.40432 21.3383 6.10421 21.7424 6.87466 21.922C7.85044 22.1495 8.97798 21.8474 11.2331 21.2432C13.4881 20.6389 14.6157 20.3368 15.347 19.6519C15.8399 19.1902 16.2065 18.6126 16.415 17.9741M8.51621 6.44531C8.16368 6.53646 7.77741 6.63996 7.35077 6.75428C5.09569 7.35853 3.96815 7.66065 3.23687 8.34557C2.65945 8.88638 2.25537 9.58627 2.07573 10.3567C1.91482 11.0468 2.01883 11.8129 2.30728 13" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Projects</h1>
+                </button>
+            </a>
+            <a href="cart.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                        <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                        <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Cart</h1>
+                </button>
+            </a>
+            <hr class="h-px bg-gray-200">
+            <a href="../index.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 12L6 12M6 12L8 14M6 12L8 10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 21.9827C10.4465 21.9359 9.51995 21.7626 8.87865 21.1213C8.11027 20.3529 8.01382 19.175 8.00171 17M16 21.9983C18.175 21.9862 19.3529 21.8897 20.1213 21.1213C21 20.2426 21 18.8284 21 16V14V10V8C21 5.17157 21 3.75736 20.1213 2.87868C19.2426 2 17.8284 2 15 2H14C11.1715 2 9.75733 2 8.87865 2.87868C8.11027 3.64706 8.01382 4.82497 8.00171 7" stroke-linecap="round"/>
+                        <path d="M3 9.5V14.5C3 16.857 3 18.0355 3.73223 18.7678C4.46447 19.5 5.64298 19.5 8 19.5M3.73223 5.23223C4.46447 4.5 5.64298 4.5 8 4.5" stroke-linecap="round"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Logout</h1>
+                </button>
+            </a>
+        </div>
+    </aside>
+    <!-- Sidebar End -->
+    
+    <!-- Content Start -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-5 w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
+        <div class="w-full relative bg-transparent space-y-1 md:space-y-2">
+            <div x-data="{ isOpen: false }" class="relative flex justify-center">
+                <button @click="isOpen = true" class="absolute top-0 right-0 bg-white p-2 lg:p-[10px] rounded-full cursor-pointer">
+                    <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5001 6H3.5" stroke-linecap="round"/>
+                        <path d="M9.5 11L10 16" stroke-linecap="round"/>
+                        <path d="M14.5 11L14 16" stroke-linecap="round"/>
+                        <path d="M6.5 6C6.55588 6 6.58382 6 6.60915 5.99936C7.43259 5.97849 8.15902 5.45491 8.43922 4.68032C8.44784 4.65649 8.45667 4.62999 8.47434 4.57697L8.57143 4.28571C8.65431 4.03708 8.69575 3.91276 8.75071 3.8072C8.97001 3.38607 9.37574 3.09364 9.84461 3.01877C9.96213 3 10.0932 3 10.3553 3H13.6447C13.9068 3 14.0379 3 14.1554 3.01877C14.6243 3.09364 15.03 3.38607 15.2493 3.8072C15.3043 3.91276 15.3457 4.03708 15.4286 4.28571L15.5257 4.57697C15.5433 4.62992 15.5522 4.65651 15.5608 4.68032C15.841 5.45491 16.5674 5.97849 17.3909 5.99936C17.4162 6 17.4441 6 17.5 6"/>
+                        <path d="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div x-show="isOpen"
+                    x-transition:enter="transition duration-300 ease-out"
+                    x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave="transition duration-150 ease-in"
+                    x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    class="fixed inset-0 z-20 overflow-y-auto bg-[#F5F7FA]"
+                    aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                    <div class="flex items-center justify-center p-1 h-screen">
+                    <span aria-hidden="true"></span>
+
+                    <!-- Pembungkus -->
+                    <div class="md:ml-64 transition-all transform bg-white opacity-85 p-5 space-y-3 md:rounded-lg">
+                        <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
+                            <div class="flex justify-normal items-center gap-2 md:gap-3">
+                                <svg class="w-[18px] md:w-7 stroke-[1.5] stroke-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 7.75V13" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.08 8.58003V15.42C21.08 16.54 20.48 17.58 19.51 18.15L13.57 21.58C12.6 22.14 11.4 22.14 10.42 21.58L4.47998 18.15C3.50998 17.59 2.90997 16.55 2.90997 15.42V8.58003C2.90997 7.46003 3.50998 6.41999 4.47998 5.84999L10.42 2.42C11.39 1.86 12.59 1.86 13.57 2.42L19.51 5.84999C20.48 6.41999 21.08 7.45003 21.08 8.58003Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 16.2V16.2999" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h1 class="text-xs md:text-sm lg:text-base text-red-500 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                            </div>
+                            <h1 class="md:ml-10 text-[10px] md:text-xs lg:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, assumenda?</h1>
+                        </div>
+                        <div class="md:ml-10 flex justify-normal items-center gap-2 md:gap-3">
+                            <button class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Yakin</h1>
+                            </button>
+                            <button @click="isOpen = false" class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Tidak</h1>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                <img class="w-full h-full object-contain" src="../images/test.png">
+            </div>
+            <div class="w-full bg-white bg-opacity-30 p-5 rounded-xl space-y-4 h-max">
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+            </div>
+        </div>
+        <div class="w-full relative bg-transparent space-y-1 md:space-y-2">
+            <div x-data="{ isOpen: false }" class="relative flex justify-center">
+                <button @click="isOpen = true" class="absolute top-0 right-0 bg-white p-2 lg:p-[10px] rounded-full cursor-pointer">
+                    <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5001 6H3.5" stroke-linecap="round"/>
+                        <path d="M9.5 11L10 16" stroke-linecap="round"/>
+                        <path d="M14.5 11L14 16" stroke-linecap="round"/>
+                        <path d="M6.5 6C6.55588 6 6.58382 6 6.60915 5.99936C7.43259 5.97849 8.15902 5.45491 8.43922 4.68032C8.44784 4.65649 8.45667 4.62999 8.47434 4.57697L8.57143 4.28571C8.65431 4.03708 8.69575 3.91276 8.75071 3.8072C8.97001 3.38607 9.37574 3.09364 9.84461 3.01877C9.96213 3 10.0932 3 10.3553 3H13.6447C13.9068 3 14.0379 3 14.1554 3.01877C14.6243 3.09364 15.03 3.38607 15.2493 3.8072C15.3043 3.91276 15.3457 4.03708 15.4286 4.28571L15.5257 4.57697C15.5433 4.62992 15.5522 4.65651 15.5608 4.68032C15.841 5.45491 16.5674 5.97849 17.3909 5.99936C17.4162 6 17.4441 6 17.5 6"/>
+                        <path d="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div x-show="isOpen"
+                    x-transition:enter="transition duration-300 ease-out"
+                    x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave="transition duration-150 ease-in"
+                    x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    class="fixed inset-0 z-20 overflow-y-auto bg-[#F5F7FA]"
+                    aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                    <div class="flex items-center justify-center p-1 h-screen">
+                    <span aria-hidden="true"></span>
+
+                    <!-- Pembungkus -->
+                    <div class="md:ml-64 transition-all transform bg-white opacity-85 p-5 space-y-3 md:rounded-lg">
+                        <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
+                            <div class="flex justify-normal items-center gap-2 md:gap-3">
+                                <svg class="w-[18px] md:w-7 stroke-[1.5] stroke-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 7.75V13" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.08 8.58003V15.42C21.08 16.54 20.48 17.58 19.51 18.15L13.57 21.58C12.6 22.14 11.4 22.14 10.42 21.58L4.47998 18.15C3.50998 17.59 2.90997 16.55 2.90997 15.42V8.58003C2.90997 7.46003 3.50998 6.41999 4.47998 5.84999L10.42 2.42C11.39 1.86 12.59 1.86 13.57 2.42L19.51 5.84999C20.48 6.41999 21.08 7.45003 21.08 8.58003Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 16.2V16.2999" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h1 class="text-xs md:text-sm lg:text-base text-red-500 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                            </div>
+                            <h1 class="md:ml-10 text-[10px] md:text-xs lg:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, assumenda?</h1>
+                        </div>
+                        <div class="md:ml-10 flex justify-normal items-center gap-2 md:gap-3">
+                            <button class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Yakin</h1>
+                            </button>
+                            <button @click="isOpen = false" class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Tidak</h1>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                <img class="w-full h-full object-contain" src="../images/test.png">
+            </div>
+            <div class="w-full bg-white bg-opacity-30 p-5 rounded-xl space-y-4 h-max">
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+            </div>
+        </div>
+        <div class="w-full relative bg-transparent space-y-1 md:space-y-2">
+            <div x-data="{ isOpen: false }" class="relative flex justify-center">
+                <button @click="isOpen = true" class="absolute top-0 right-0 bg-white p-2 lg:p-[10px] rounded-full cursor-pointer">
+                    <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5001 6H3.5" stroke-linecap="round"/>
+                        <path d="M9.5 11L10 16" stroke-linecap="round"/>
+                        <path d="M14.5 11L14 16" stroke-linecap="round"/>
+                        <path d="M6.5 6C6.55588 6 6.58382 6 6.60915 5.99936C7.43259 5.97849 8.15902 5.45491 8.43922 4.68032C8.44784 4.65649 8.45667 4.62999 8.47434 4.57697L8.57143 4.28571C8.65431 4.03708 8.69575 3.91276 8.75071 3.8072C8.97001 3.38607 9.37574 3.09364 9.84461 3.01877C9.96213 3 10.0932 3 10.3553 3H13.6447C13.9068 3 14.0379 3 14.1554 3.01877C14.6243 3.09364 15.03 3.38607 15.2493 3.8072C15.3043 3.91276 15.3457 4.03708 15.4286 4.28571L15.5257 4.57697C15.5433 4.62992 15.5522 4.65651 15.5608 4.68032C15.841 5.45491 16.5674 5.97849 17.3909 5.99936C17.4162 6 17.4441 6 17.5 6"/>
+                        <path d="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div x-show="isOpen"
+                    x-transition:enter="transition duration-300 ease-out"
+                    x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave="transition duration-150 ease-in"
+                    x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    class="fixed inset-0 z-20 overflow-y-auto bg-[#F5F7FA]"
+                    aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                    <div class="flex items-center justify-center p-1 h-screen">
+                    <span aria-hidden="true"></span>
+
+                    <!-- Pembungkus -->
+                    <div class="md:ml-64 transition-all transform bg-white opacity-85 p-5 space-y-3 md:rounded-lg">
+                        <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
+                            <div class="flex justify-normal items-center gap-2 md:gap-3">
+                                <svg class="w-[18px] md:w-7 stroke-[1.5] stroke-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 7.75V13" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.08 8.58003V15.42C21.08 16.54 20.48 17.58 19.51 18.15L13.57 21.58C12.6 22.14 11.4 22.14 10.42 21.58L4.47998 18.15C3.50998 17.59 2.90997 16.55 2.90997 15.42V8.58003C2.90997 7.46003 3.50998 6.41999 4.47998 5.84999L10.42 2.42C11.39 1.86 12.59 1.86 13.57 2.42L19.51 5.84999C20.48 6.41999 21.08 7.45003 21.08 8.58003Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 16.2V16.2999" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h1 class="text-xs md:text-sm lg:text-base text-red-500 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                            </div>
+                            <h1 class="md:ml-10 text-[10px] md:text-xs lg:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, assumenda?</h1>
+                        </div>
+                        <div class="md:ml-10 flex justify-normal items-center gap-2 md:gap-3">
+                            <button class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Yakin</h1>
+                            </button>
+                            <button @click="isOpen = false" class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Tidak</h1>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                <img class="w-full h-full object-contain" src="../images/test.png">
+            </div>
+            <div class="w-full bg-white bg-opacity-30 p-5 rounded-xl space-y-4 h-max">
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+            </div>
+        </div>
+        <div class="w-full relative bg-transparent space-y-1 md:space-y-2">
+            <div x-data="{ isOpen: false }" class="relative flex justify-center">
+                <button @click="isOpen = true" class="absolute top-0 right-0 bg-white p-2 lg:p-[10px] rounded-full cursor-pointer">
+                    <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5001 6H3.5" stroke-linecap="round"/>
+                        <path d="M9.5 11L10 16" stroke-linecap="round"/>
+                        <path d="M14.5 11L14 16" stroke-linecap="round"/>
+                        <path d="M6.5 6C6.55588 6 6.58382 6 6.60915 5.99936C7.43259 5.97849 8.15902 5.45491 8.43922 4.68032C8.44784 4.65649 8.45667 4.62999 8.47434 4.57697L8.57143 4.28571C8.65431 4.03708 8.69575 3.91276 8.75071 3.8072C8.97001 3.38607 9.37574 3.09364 9.84461 3.01877C9.96213 3 10.0932 3 10.3553 3H13.6447C13.9068 3 14.0379 3 14.1554 3.01877C14.6243 3.09364 15.03 3.38607 15.2493 3.8072C15.3043 3.91276 15.3457 4.03708 15.4286 4.28571L15.5257 4.57697C15.5433 4.62992 15.5522 4.65651 15.5608 4.68032C15.841 5.45491 16.5674 5.97849 17.3909 5.99936C17.4162 6 17.4441 6 17.5 6"/>
+                        <path d="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div x-show="isOpen"
+                    x-transition:enter="transition duration-300 ease-out"
+                    x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave="transition duration-150 ease-in"
+                    x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+                    x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                    class="fixed inset-0 z-20 overflow-y-auto bg-[#F5F7FA]"
+                    aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                    <div class="flex items-center justify-center p-1 h-screen">
+                    <span aria-hidden="true"></span>
+
+                    <!-- Pembungkus -->
+                    <div class="md:ml-64 transition-all transform bg-white opacity-85 p-5 space-y-3 md:rounded-lg">
+                        <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
+                            <div class="flex justify-normal items-center gap-2 md:gap-3">
+                                <svg class="w-[18px] md:w-7 stroke-[1.5] stroke-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 7.75V13" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.08 8.58003V15.42C21.08 16.54 20.48 17.58 19.51 18.15L13.57 21.58C12.6 22.14 11.4 22.14 10.42 21.58L4.47998 18.15C3.50998 17.59 2.90997 16.55 2.90997 15.42V8.58003C2.90997 7.46003 3.50998 6.41999 4.47998 5.84999L10.42 2.42C11.39 1.86 12.59 1.86 13.57 2.42L19.51 5.84999C20.48 6.41999 21.08 7.45003 21.08 8.58003Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 16.2V16.2999" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h1 class="text-xs md:text-sm lg:text-base text-red-500 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                            </div>
+                            <h1 class="md:ml-10 text-[10px] md:text-xs lg:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, assumenda?</h1>
+                        </div>
+                        <div class="md:ml-10 flex justify-normal items-center gap-2 md:gap-3">
+                            <button class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Yakin</h1>
+                            </button>
+                            <button @click="isOpen = false" class="bg-transparent py-1.5 px-6 border-[0.5px] border-gray-500 rounded-md">
+                                <h1 class="text-[8px] sm:text-[10px] md:text-xs text-slate-800 font-medium uppercase">Tidak</h1>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
+                <img class="w-full h-full object-contain" src="../images/test.png">
+            </div>
+            <div class="w-full bg-white bg-opacity-30 p-5 rounded-xl space-y-4 h-max">
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Content End -->
+
+    <!-- Script Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script End -->
+     
+</body>
+</html>
