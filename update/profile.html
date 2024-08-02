@@ -1,0 +1,367 @@
+<div class="row-span-3 h-fit col-start-2 col-span-3 relative mt-3 flex justify-normal items-center gap-3">
+    <input id="project" class="peer/project hidden" type="radio" name="status" checked/>
+    <label for="project" class="flex justify-normal items-center gap-1 py-2 px-4 bg-transparent border-b-2 border-transparent hover:border-gray-500 text-gray-700 peer-checked/project:border-[#37B7C3] peer-checked/project:text-[#37B7C3] peer-checked/project:stroke-[#37B7C3] cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.35912 7.02646 8.43977 6.72546 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.669 7.04708 21.565 7.81304 21.2766 9" stroke-linecap="round"/>
+            <path d="M3.27222 16.647C3.87647 18.9021 4.17859 20.0296 4.86351 20.7609C5.40432 21.3383 6.10421 21.7424 6.87466 21.922C7.85044 22.1495 8.97798 21.8474 11.2331 21.2432C13.4881 20.6389 14.6157 20.3368 15.347 19.6519C15.8399 19.1902 16.2065 18.6126 16.415 17.9741M8.51621 6.44531C8.16368 6.53646 7.77741 6.63996 7.35077 6.75428C5.09569 7.35853 3.96815 7.66065 3.23687 8.34557C2.65945 8.88638 2.25537 9.58627 2.07573 10.3567C1.91482 11.0468 2.01883 11.8129 2.30728 13" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1 class="text-sm font-normal capitalize">Project</h1>
+    </label>
+
+    <input id="testimonial" class="peer/testimonial hidden" type="radio" name="status"/>
+    <label for="testimonial" class="flex justify-normal items-center gap-1 py-2 px-4 bg-transparent border-b-2 border-transparent hover:border-gray-500 text-gray-700 peer-checked/testimonial:border-[#37B7C3] peer-checked/testimonial:text-[#37B7C3] peer-checked/testimonial:stroke-[#37B7C3] cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="6" r="4"/>
+            <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke-linecap="round"/>
+        </svg>
+        <h1 class="text-sm font-normal capitalize">Testimonial</h1>
+    </label>
+
+    <div class="absolute w-full mt-[39rem] hidden peer-checked/project:block peer-checked/project:animate-fadeIn">
+        <div class="grid grid-cols-3 gap-3">
+            <div class="relative p-6 bg-white rounded-xl space-y-4 h-max">
+                <div class="absolute right-0 top-0 bg-[#37B7C3] py-1.5 md:py-2 px-4 md:px-5 rounded-bl-xl rounded-se-xl">
+                    <h1 class="text-xs md:text-sm text-white font-medium uppercase">POPULAR</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="flex justify-normal items-center">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-gray-600 font-medium">10 Reviews</h1>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                        </svg>
+                        <h1 class="text-xs md:text-sm text-slate-600 font-medium capitalize">10 Order</h1>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+                <div class="w-fit">
+                    <a href="detail-project.html">
+                        <button class="flex justify-normal items-center gap-2 bg-gradient-to-r from-[#088395] to-[#37B7C3] py-1.5 px-5 md:px-6 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                            </svg>
+                            <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="relative p-6 bg-white rounded-xl space-y-4 h-max">
+                <div class="absolute right-0 top-0 bg-[#37B7C3] py-1.5 md:py-2 px-4 md:px-5 rounded-bl-xl rounded-se-xl">
+                    <h1 class="text-xs md:text-sm text-white font-medium uppercase">POPULAR</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="flex justify-normal items-center">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-gray-600 font-medium">10 Reviews</h1>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                        </svg>
+                        <h1 class="text-xs md:text-sm text-slate-600 font-medium capitalize">10 Order</h1>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+                <div class="w-fit">
+                    <a href="detail-project.html">
+                        <button class="flex justify-normal items-center gap-2 bg-gradient-to-r from-[#088395] to-[#37B7C3] py-1.5 px-5 md:px-6 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                            </svg>
+                            <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="relative p-6 bg-white rounded-xl space-y-4 h-max">
+                <div class="absolute right-0 top-0 bg-[#37B7C3] py-1.5 md:py-2 px-4 md:px-5 rounded-bl-xl rounded-se-xl">
+                    <h1 class="text-xs md:text-sm text-white font-medium uppercase">POPULAR</h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-4">
+                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                        </div>
+                        <div class="md:space-y-[-3px]">
+                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="flex justify-normal items-center">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-gray-600 font-medium">10 Reviews</h1>
+                    </div>
+                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                    <div class="flex justify-normal items-center gap-3">
+                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
+                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex justify-normal items-center gap-2">
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
+                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
+                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-normal items-center gap-2">
+                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                        </svg>
+                        <h1 class="text-xs md:text-sm text-slate-600 font-medium capitalize">10 Order</h1>
+                    </div>
+                </div>
+                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
+                <div class="w-fit">
+                    <a href="detail-project.html">
+                        <button class="flex justify-normal items-center gap-2 bg-gradient-to-r from-[#088395] to-[#37B7C3] py-1.5 px-5 md:px-6 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                            </svg>
+                            <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute w-full mt-[26rem] hidden peer-checked/testimonial:block peer-checked/testimonial:animate-fadeIn">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-6 rounded-xl space-y-4 h-max">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                <div class="flex justify-normal items-center gap-4">
+                    <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                        <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                    </div>
+                    <div class="md:space-y-[-3px]">
+                        <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                        <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl space-y-4 h-max">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                <div class="flex justify-normal items-center gap-4">
+                    <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                        <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                    </div>
+                    <div class="md:space-y-[-3px]">
+                        <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                        <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl space-y-4 h-max">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
+                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
+                <div class="flex justify-normal items-center gap-4">
+                    <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
+                        <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
+                    </div>
+                    <div class="md:space-y-[-3px]">
+                        <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
+                        <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
