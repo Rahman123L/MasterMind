@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body class="bg-[#EBF4F6]">
@@ -162,177 +163,36 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64 space-y-5 md:space-y-10">
-        <!-- Detail Card Start -->
-        <div class="w-full sm:w-[80%] md:w-[70%] bg-transparent mx-auto grid grid-cols-1 lg:grid-cols-2 place-items-center gap-5 rounded-xl">
-            <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
-                <img class="w-full h-full object-contain" src="../images/test.png">
+    <section class="relative w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
+        <div class="relative z-20 mt-[17rem] w-full lg:w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="row-span-2 h-fit col-span-1">
+                <div class="bg-teal-500 p-2"></div>
             </div>
-            <div class="relative p-6 rounded-xl space-y-4 h-max">
-                <div class="absolute right-0 top-0 bg-[#37B7C3] py-1.5 md:py-2 px-4 md:px-5 rounded-bl-xl rounded-se-xl">
-                    <h1 class="text-xs md:text-sm text-white font-medium uppercase">POPULAR</h1>
+            <div class="row-span-1 h-fit col-span-3">
+                <div class="bg-teal-500 p-2"></div>
+            </div>
+            <div class="row-span-3 h-fit col-start-2 col-span-3 grid gap-3">
+                <div class="">
+                    <div class="bg-teal-500 p-2"></div>
                 </div>
-                <div class="space-y-2">
-                    <div class="flex justify-normal items-center gap-4">
-                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
-                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
-                        </div>
-                        <div class="md:space-y-[-3px]">
-                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
-                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-normal items-center gap-3">
-                        <div class="flex justify-normal items-center">
-                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                              </svg>
-                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                              </svg>
-                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                              </svg>
-                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                              </svg>
-                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                              </svg>
-                        </div>
-                        <h1 class="text-xs md:text-sm text-gray-600 font-medium">10 Reviews</h1>
-                    </div>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptas perferendis consequatur asperiores sint hic, rerum maiores ipsum voluptate nulla.</h1>
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-teal-500 p-2"></div>
+                    <div class="bg-teal-500 p-2"></div>
+                    <div class="bg-teal-500 p-2"></div>
                 </div>
-                <div class="space-y-3">
-                    <div class="flex justify-normal items-center gap-3">
-                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
-                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                        </div>
-                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
-                    </div>
-                    <div class="flex justify-normal items-center gap-3">
-                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
-                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                        </div>
-                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
-                    </div>
-                    <div class="flex justify-normal items-center gap-3">
-                        <div class="w-4 md:w-5 h-4 md:h-5 flex justify-center items-center bg-gray-400 rounded-full">
-                            <svg class="w-3 md:w-3.5 stroke-[2.5] stroke-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                <path d="M20 6L9 17l-5-5"></path>
-                            </svg>
-                        </div>
-                        <h1 class="text-xs md:text-sm text-slate-800 font-normal capitalize">Lorem, ipsum dolor.</h1>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <div class="flex justify-normal items-center gap-2">
-                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
-                        </svg>
-                        <div class="flex justify-normal items-center gap-2">
-                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">3 Jam</h1>
-                            <span class="inline-block w-2 h-[2px] bg-gray-500 rounded-full"></span>
-                            <h1 class="text-xs md:text-sm text-slate-600 font-medium">1 Hari</h1>
-                        </div>
-                    </div>
-                    <div class="flex justify-normal items-center gap-2">
-                        <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
-                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
-                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
-                        </svg>
-                        <h1 class="text-xs md:text-sm text-slate-600 font-medium capitalize">10 Order</h1>
-                    </div>
-                </div>
-                <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">Rp. 70.000</h1>
             </div>
         </div>
-        <!-- Detail Card End -->
-
-        <!-- Testimonials Start -->
-        <section class="w-full sm:w-[80%] md:w-[90%] p-3 md:p-0 mx-auto space-y-8 md:space-y-14">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
-                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-                    </svg>
-                    <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
-                        <img class="w-full h-full object-contain" src="../images/test.png">
-                    </div>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
-                    <div class="flex justify-normal items-center gap-4">
-                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
-                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
-                        </div>
-                        <div class="md:space-y-[-3px]">
-                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
-                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
-                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-                    </svg>
-                    <div class="w-full h-[10rem] md:h-[13rem] mx-auto bg-transparent overflow-hidden bg-cover">
-                        <img class="w-full h-full object-contain" src="../images/test.png">
-                    </div>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
-                    <div class="flex justify-normal items-center gap-4">
-                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
-                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
-                        </div>
-                        <div class="md:space-y-[-3px]">
-                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
-                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
-                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-                    </svg>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
-                    <div class="flex justify-normal items-center gap-4">
-                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
-                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
-                        </div>
-                        <div class="md:space-y-[-3px]">
-                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
-                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white bg-opacity-30 p-6 rounded-xl space-y-4 h-max">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
-                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-                    </svg>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus sunt nemo inventore, laudantium eius? Voluptas illo fugiat magnam ipsam error adipisci. Veniam architecto nisi quas porro, eaque sint autem!</h1>
-                    <div class="flex justify-normal items-center gap-4">
-                        <div class="w-9 md:w-12 h-9 md:h-12 rounded-full object-cover">
-                            <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
-                        </div>
-                        <div class="md:space-y-[-3px]">
-                            <h1 class="text-xs md:text-sm lg:text-base text-slate-800 font-medium">Rizky Rahman Rambe</h1>
-                            <p class="text-[10px] md:text-xs lg:text-sm text-gray-600 font-normal">Frontend Developer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonials End -->
+        <div class="absolute z-10 top-7 w-full h-[20rem] object-cover overflow-hidden">
+            <img class="w-full h-full bg-cover" src="../images/background.svg">
+        </div>
     </section>
     <!-- Content End -->
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/chart-line.js"></script>
+    <script src="../js/chart-bar.js"></script>
+    <script src="../js/chart-pie.js"></script>
     <!-- Script End -->
      
 </body>

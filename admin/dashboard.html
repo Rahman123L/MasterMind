@@ -109,15 +109,15 @@
             <div class="col-span-1 lg:col-span-4 grid grid-cols-1 lg:grid-cols-4 gap-5">
                 <div class="col-span-1 lg:col-span-4 h-[300px] lg:h-[400px] bg-white rounded-xl p-3 md:p-4">
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Revenue</h1>
-                    <canvas id="myChart" class="py-3 lg:py-5"></canvas>
+                    <canvas id="chartLine" class="py-3 lg:py-5"></canvas>
                 </div>
                 <div class="col-span-1 lg:col-span-2 h-[300px] bg-white rounded-xl p-3 md:p-4">
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Visitors</h1>
-                    <canvas id="myChart" class="py-3 lg:py-5"></canvas>
+                    <canvas id="chartBar" class="py-3 lg:py-5"></canvas>
                 </div>
                 <div class="col-span-1 lg:col-span-2 h-[300px] bg-white rounded-xl p-3 md:p-4">
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Top Selling</h1>
-                    <canvas id="myChart" class="py-3 lg:py-5"></canvas>
+                    <canvas id="chartPie" class="py-3 lg:py-5"></canvas>
                 </div>
             </div>
             <div class="col-span-1 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -282,9 +282,9 @@
                 </div>
             </div>
             <div class="col-span-1 lg:col-span-6 grid grid-cols-1 lg:grid-cols-6 gap-5">
-                <div class="col-span-1 lg:col-span-2 bg-white rounded-xl p-3 md:p-4 space-y-4">
+                <div class="col-span-1 lg:col-span-2 bg-white rounded-xl p-3 md:p-5 pb-4 space-y-4">
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Rating and Reviews</h1>
-                    <div class="flex justify-between items-center gap-3 bg-slate-100 py-2.5 px-6 rounded-lg">
+                    <div class="flex justify-between items-center gap-3 bg-slate-100 mx-1 md:mx-2 py-2.5 px-6 rounded-lg">
                         <div class="flex justify-normal items-center gap-3">
                             <div class="flex justify-normal items-center">
                                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 md:w-4 h-3 md:h-4 text-[#088395]" viewBox="0 0 24 24">
@@ -336,9 +336,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-1 lg:col-span-2 bg-white rounded-xl p-3 md:p-4 space-y-4">
+                <div class="col-span-1 lg:col-span-2 bg-white rounded-xl p-3 md:p-4 pb-4 space-y-4 md:space-y-7">
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Total Orders</h1>
-                    <div class="grid grid-cols-2 gap-5 gap-y-7">
+                    <div class="grid grid-cols-2 gap-5 gap-y-7 mx-1 md:mx-2">
                         <div class="w-full flex justify-normal items-center gap-3">
                             <div class="bg-red-500 p-2 rounded-full">
                                 <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -348,7 +348,7 @@
                                 </svg>
                             </div>
                             <div class="-space-y-1">
-                                <h1 class="text-sm md:text-base text-gray-800 font-medium">Frontend</h1>
+                                <h1 class="text-[10px] md:text-xs text-gray-800 font-medium">Lorem, ipsum dolor.</h1>
                                 <h1 class="text-xs md:text-sm text-gray-500 font-normal">35 Orders</h1>
                             </div>
                         </div>
@@ -361,7 +361,7 @@
                                 </svg>
                             </div>
                             <div class="-space-y-1">
-                                <h1 class="text-sm md:text-base text-gray-800 font-medium">Frontend</h1>
+                                <h1 class="text-[10px] md:text-xs text-gray-800 font-medium">Lorem, ipsum dolor.</h1>
                                 <h1 class="text-xs md:text-sm text-gray-500 font-normal">35 Orders</h1>
                             </div>
                         </div>
@@ -374,7 +374,7 @@
                                 </svg>
                             </div>
                             <div class="-space-y-1">
-                                <h1 class="text-sm md:text-base text-gray-800 font-medium">Frontend</h1>
+                                <h1 class="text-[10px] md:text-xs text-gray-800 font-medium">Lorem, ipsum dolor.</h1>
                                 <h1 class="text-xs md:text-sm text-gray-500 font-normal">35 Orders</h1>
                             </div>
                         </div>
@@ -387,39 +387,41 @@
                                 </svg>
                             </div>
                             <div class="-space-y-1">
-                                <h1 class="text-sm md:text-base text-gray-800 font-medium">Frontend</h1>
+                                <h1 class="text-[10px] md:text-xs text-gray-800 font-medium">Lorem, ipsum dolor.</h1>
                                 <h1 class="text-xs md:text-sm text-gray-500 font-normal">35 Orders</h1>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-1 lg:col-span-2 bg-white rounded-xl p-3 md:p-4 space-y-3">
+                <div class="col-span-1 lg:col-span-2 bg-white rounded-xl p-3 md:p-4 pb-4 space-y-3">
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Activity</h1>            
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center gap-3">
-                            <span class="text-xs md:text-sm font-medium text-gray-700">Lorem, ipsum dolor.</span>
-                            <span class="text-xs md:text-sm font-medium text-gray-700">58%</span>
+                    <div class="mx-1 md:mx-2 space-y-2">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="text-xs md:text-sm font-medium text-gray-700">Lorem, ipsum dolor.</span>
+                                <span class="text-xs md:text-sm font-medium text-gray-700">58%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 58%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-slate-100 rounded-full h-2">
-                            <div class="bg-green-600 h-2 rounded-full" style="width: 58%"></div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="text-xs md:text-sm font-medium text-gray-700">Lorem, ipsum dolor.</span>
+                                <span class="text-xs md:text-sm font-medium text-gray-700">45%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center gap-3">
-                            <span class="text-xs md:text-sm font-medium text-gray-700">Lorem, ipsum dolor.</span>
-                            <span class="text-xs md:text-sm font-medium text-gray-700">45%</span>
-                        </div>
-                        <div class="w-full bg-slate-100 rounded-full h-2">
-                            <div class="bg-blue-600 h-2 rounded-full" style="width: 45%"></div>
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center gap-3">
-                            <span class="text-xs md:text-sm font-medium text-gray-700">Lorem, ipsum dolor.</span>
-                            <span class="text-xs md:text-sm font-medium text-gray-700">35%</span>
-                        </div>
-                        <div class="w-full bg-slate-100 rounded-full h-2">
-                            <div class="bg-red-600 h-2 rounded-full" style="width: 35%"></div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center gap-3">
+                                <span class="text-xs md:text-sm font-medium text-gray-700">Lorem, ipsum dolor.</span>
+                                <span class="text-xs md:text-sm font-medium text-gray-700">35%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2">
+                                <div class="bg-red-600 h-2 rounded-full" style="width: 35%"></div>
+                            </div>
                         </div>
                     </div>  
                 </div>
@@ -430,7 +432,9 @@
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/chart-diagram.js"></script>
+    <script src="../js/chart-line.js"></script>
+    <script src="../js/chart-bar.js"></script>
+    <script src="../js/chart-pie.js"></script>
     <!-- Script End -->
      
 </body>
