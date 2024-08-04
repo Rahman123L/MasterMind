@@ -54,8 +54,36 @@
                         <div class="absolute bottom-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
                     </a>
                 </div>
-                <a href="profile.html" class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-gray-500 overflow-hidden bg-cover rounded-full">
-                    <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                <a href="profile.html" class="flex justify-normal items-center gap-4">
+                    <div class="hidden md:block text-end">
+                        <h1 class="text-xs lg:text-sm text-black font-medium capitalize">Rizky Rahman Rambe</h1>
+                        <p class="text-[10px] lg:text-xs text-gray-500 font-normal">Frontend Developer</p>
+                    </div>
+
+                    <!-- Silver -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-gray-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Gold -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-yellow-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Platinum -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-blue-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Diamond -->
+                    <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-purple-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div>
+
+                    <!-- Master Mind -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-[#37B7C3] overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
                 </a>
             </div>
         </div>
@@ -66,8 +94,8 @@
     <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen mt-14 md:mt-[76px] lg:mt-20 px-6 py-4 scrollbar-y transition transform duration-700 -translate-x-full bg-white md:translate-x-0" aria-label="Sidebar">
         <div class="grid gap-3 md:gap-5">
             <a href="dashboard.html">
-                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
-                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 22L2 22" stroke-linecap="round"/>
                         <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
                         <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
@@ -76,7 +104,7 @@
                         <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round"/>
                         <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/>
                     </svg>
-                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Dashboard</h1>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Dashboard</h1>
                 </button>
             </a>
             <a href="project.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
@@ -188,7 +216,7 @@
                     <h1 class="text-sm md:text-base mx-1 md:mx-2 text-black font-medium md:font-semibold capitalize">Order History</h1>
                     <div class="space-y-2 border-b border-gray-100 pb-2 px-3">
                         <div class="flex justify-normal items-center gap-4">
-                            <div class="w-9 h-9 rounded-full object-cover">
+                            <div class="w-9 h-9 rounded-full object-cover border border-purple-500">
                                 <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
                             </div>
                             <div class="md:space-y-[-2px]">
@@ -220,7 +248,7 @@
                     </div>
                     <div class="space-y-2 border-b border-gray-100 pb-2 px-3">
                         <div class="flex justify-normal items-center gap-4">
-                            <div class="w-9 h-9 rounded-full object-cover">
+                            <div class="w-9 h-9 rounded-full object-cover border border-purple-500">
                                 <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
                             </div>
                             <div class="md:space-y-[-2px]">
@@ -252,7 +280,7 @@
                     </div>
                     <div class="space-y-2 border-b border-gray-100 pb-2 px-3">
                         <div class="flex justify-normal items-center gap-4">
-                            <div class="w-9 h-9 rounded-full object-cover">
+                            <div class="w-9 h-9 rounded-full object-cover border border-purple-500">
                                 <img class="w-full h-full rounded-full object-contain" src="../images/avatar.jpg">
                             </div>
                             <div class="md:space-y-[-2px]">
