@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Mind</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/mm.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body class="bg-[#ecf2f4]">
+
+    <!-- Content Start -->
+    <section class="w-full overflow-hidden">
+        <div class="hidden md:flex absolute justify-normal items-center gap-2 p-7">
+            <div class="w-[36px] lg:w-10 h-[36px] lg:h-10 object-cover">
+                <img class="w-full h-full object-contain" src="images/mm.svg">
+            </div>
+            <h1 class="text-xs md:text-sm lg:text-lg text-gray-600 font-bold"><span class="text-[#088395] font-bold">M</span>aster <span class="text-[#37B7C3] font-bold">M</span>ind</h1>
+        </div>
+        <div class="flex justify-center items-center lg:h-screen">
+            <div class="hidden lg:block absolute -z-10 right-0">
+                <img class="w-full h-screen object-contain" src="images/login-registrasi.svg">
+            </div>
+            <div class="w-[90%] sm:w-[70%] md:w-full lg:grid lg:grid-cols-2 gap-5">
+                <div class="w-full md:flex justify-normal items-center lg:h-screen">
+                    <div class="w-full md:w-[70%] mx-auto my-10 lg:my-0">
+                        <form action="" method="" class="space-y-3 md:space-y-4 lg:space-y-5">
+                            <div class="lg:hidden w-full">
+                                <div class="w-20 lg:w-24 h-20 lg:h-24 object-cover mx-auto">
+                                    <img class="w-full h-full object-contain" src="images/mm.svg">
+                                </div>
+                                <h1 class="text-center text-lg md:text-xl font-medium capitalize"><span class="text-[#088395] font-semibold">D</span>aftar <span class="text-[#37B7C3] font-semibold">A</span>kun</h1></h1>
+                            </div>
+                            <div class="md:flex justify-normal items-center gap-4 space-y-3 lg:space-y-0">
+                                <div class="w-full">
+                                    <label class="space-y-1">
+                                        <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">First Name</h1>
+                                        <input type="text" placeholder="Rizky" required autocomplete="off" autofocus class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                        <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                    </label>
+                                </div>
+                                <div class="w-full">
+                                    <label class="space-y-1">
+                                        <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Last Name</h1>
+                                        <input type="text" placeholder="Rahman" required autocomplete="off" autofocus class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                        <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="md:flex justify-normal items-center gap-4 space-y-3 lg:space-y-0">
+                                <div class="w-full">
+                                    <label class="space-y-1">
+                                        <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Username</h1>
+                                        <input type="text" placeholder="Rizky Rahman Rambe" required autocomplete="off" autofocus class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                        <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                    </label>
+                                </div>
+                                <div class="w-full">
+                                    <label class="space-y-1">
+                                        <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Email</h1>
+                                        <input type="email" inputmode="email" placeholder="Example@gmail.com" required autocomplete="off" class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                        <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <label class="space-y-1">
+                                    <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Nomor Handphone</h1>
+                                    <input type="number" inputmode="numeric" placeholder="0823 **** ****" required autocomplete="off" class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                    <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                </label>
+                            </div>
+                            <div class="md:flex justify-normal items-center gap-4 space-y-3 lg:space-y-0">
+                                <div class="w-full">
+                                    <label class="space-y-1">
+                                        <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Password</h1>
+                                        <input type="password" placeholder="**********" required autocomplete="off" class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                        <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                    </label>
+                                </div>
+                                <div class="w-full">
+                                    <label class="space-y-1">
+                                        <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Konfirmasi Password</h1>
+                                        <input type="password" placeholder="**********" required autocomplete="off" class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                        <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="relative group w-full bg-[#37B7C3] py-2 md:py-2.5 px-5 rounded-md">
+                                <h1 class="relative z-10 text-sm md:text-base text-white font-medium uppercase">Daftar</h1>
+                                <div class="absolute inset-0 bg-gradient-to-r from-[#088395] rounded-md h-full w-0 transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                            </button>
+                            <div class="text-center">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 font-normal">Sudah Punya Akun? <a href="login.html" class="hover:underline hover:text-[#088395]">Login</a></h1>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <img class="hidden lg:block w-full h-full object-contain rounded-s-xl" src="images/login-registrasi.png">
+            </div>
+        </div>
+    </section>
+    <!-- Content End -->
+
+    <!-- Script Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script End --> 
+ 
+</body>
+</html>
