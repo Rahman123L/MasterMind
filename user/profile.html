@@ -419,12 +419,14 @@
                             <h1 class="text-sm md:text-base text-white font-medium capitalize">Master Mind</h1>
                         </div> -->
 
-                        <button class="flex justify-center items-center gap-3 bg-[#37B7C3] group transition transform duration-300 hover:bg-[#088395] focus:bg-[#088395] py-[7px] md:py-1.5 px-3 lg:px-5 rounded-md">
-                            <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <h1 class="hidden md:block text-sm md:text-base text-white font-medium capitalize">Edit Profile</h1>
-                        </button>
+                        <a href="#">
+                            <button class="flex justify-center items-center gap-3 bg-[#37B7C3] group transition transform duration-300 hover:bg-[#088395] focus:bg-[#088395] py-[7px] md:py-1.5 px-3 lg:px-5 rounded-md">
+                                <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h1 class="hidden md:block text-sm md:text-base text-white font-medium capitalize">Edit Profile</h1>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div class="row-span-3 h-fit col-start-1 md:col-start-2 col-span-1 lg:col-span-3 relative md:-mt-9 lg:-mt-4 p-5">
@@ -451,7 +453,9 @@
                     </div>
                     <div id="default-styled-tab-content" class="my-5 lg:my-[2rem]">
                         <div class="hidden" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5">
+
+                            <!-- Content Start -->
+                            <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5">
                                 <div class="relative p-6 bg-gray-500 bg-opacity-10 rounded-xl space-y-4 h-max">
                                     <div class="absolute right-0 top-0 bg-gray-500 py-1.5 md:py-2 px-4 md:px-5 rounded-bl-xl rounded-se-xl">
                                         <h1 class="text-xs md:text-sm text-white font-medium uppercase">POPULAR</h1>
@@ -560,13 +564,16 @@
                                         <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">70,000.00</h1>
                                     </div>
                                     <div class="w-fit">
-                                        <a href="detail-project.html">
+                                        <a href="detail-order.html">
                                             <button class="flex justify-normal items-center gap-2 bg-gray-500 py-1.5 px-5 md:px-6 rounded-md">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                                                <svg class="w-3.5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                                                    <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                                                    <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                                                    <path d="M9 17.5H15" stroke-linecap="round"/>
+                                                    <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                                                    <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                                                    <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
                                                 </svg>
                                                 <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
                                             </button>
@@ -681,13 +688,16 @@
                                         <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">70,000.00</h1>
                                     </div>
                                     <div class="w-fit">
-                                        <a href="detail-project.html">
+                                        <a href="detail-order.html">
                                             <button class="flex justify-normal items-center gap-2 bg-purple-500 py-1.5 px-5 md:px-6 rounded-md">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                                                <svg class="w-3.5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                                                    <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                                                    <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                                                    <path d="M9 17.5H15" stroke-linecap="round"/>
+                                                    <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                                                    <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                                                    <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
                                                 </svg>
                                                 <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
                                             </button>
@@ -802,25 +812,54 @@
                                         <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">70,000.00</h1>
                                     </div>
                                     <div class="w-fit">
-                                        <a href="detail-project.html">
+                                        <a href="detail-order.html">
                                             <button class="flex justify-normal items-center gap-2 bg-[#37B7C3] py-1.5 px-5 md:px-6 rounded-md">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                                                <svg class="w-3.5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                                                    <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                                                    <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                                                    <path d="M9 17.5H15" stroke-linecap="round"/>
+                                                    <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                                                    <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                                                    <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
                                                 </svg>
                                                 <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
                                             </button>
                                         </a>
                                     </div>
                                 </div>
+                            </div> -->
+                            <!-- Content End -->
+
+                            <!-- Default Start -->
+                            <div class="flex items-center justify-center">
+                                <div class="space-y-3 md:space-y-4 lg:space-y-5 p-10">
+                                    <div class="w-36 md:w-56 h-36 md:h-56 mx-auto overflow-hidden bg-cover">
+                                        <img class="w-full h-full object-contain" src="../images/default-order.svg">
+                                    </div>
+                                    <div class="text-center">
+                                        <h1 class="text-sm md:text-base lg:text-lg text-slate-800 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                                        <p class="text-xs md:text-sm lg:text-base text-gray-500 font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="w-fit mx-auto">
+                                        <a href="project.html">
+                                            <button class="flex mx-auto gap-3 bg-[#37B7C3] py-2 px-5 md:px-6 rounded-md">
+                                                <svg class="w-4 md:w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.35912 7.02646 8.43977 6.72546 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.669 7.04708 21.565 7.81304 21.2766 9" stroke-linecap="round"/>
+                                                    <path d="M3.27222 16.647C3.87647 18.9021 4.17859 20.0296 4.86351 20.7609C5.40432 21.3383 6.10421 21.7424 6.87466 21.922C7.85044 22.1495 8.97798 21.8474 11.2331 21.2432C13.4881 20.6389 14.6157 20.3368 15.347 19.6519C15.8399 19.1902 16.2065 18.6126 16.415 17.9741M8.51621 6.44531C8.16368 6.53646 7.77741 6.63996 7.35077 6.75428C5.09569 7.35853 3.96815 7.66065 3.23687 8.34557C2.65945 8.88638 2.25537 9.58627 2.07573 10.3567C1.91482 11.0468 2.01883 11.8129 2.30728 13" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <h1 class="text-xs md:text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Project</h1>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Default End -->
                         </div>
                         <div class="hidden" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5">
 
-                                <!-- Silver -->
+                            <!-- Content Start -->
+                            <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5">
                                 <div class="bg-gray-500 bg-opacity-10 p-6 rounded-xl space-y-4 h-max">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-gray-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
@@ -840,7 +879,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Gold -->
                                 <div class="bg-yellow-500 bg-opacity-10 p-6 rounded-xl space-y-4 h-max">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-yellow-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
@@ -860,7 +898,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Platinum -->
                                 <div class="bg-blue-500 bg-opacity-10 p-6 rounded-xl space-y-4 h-max">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-blue-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
@@ -880,7 +917,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Diamond -->
                                 <div class="bg-purple-500 bg-opacity-10 p-6 rounded-xl space-y-4 h-max">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-purple-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
@@ -900,7 +936,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Master Mind -->
                                 <div class="bg-[#37B7C3] bg-opacity-10 p-6 rounded-xl space-y-4 h-max">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-4 md:w-5 h-4 md:h-5 text-[#37B7C3]" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
@@ -919,7 +954,38 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div> -->
+                            <!-- Content End -->
+
+                            <!-- Default Start -->
+                            <div class="flex items-center justify-center">
+                                <div class="space-y-3 md:space-y-4 lg:space-y-5 p-10">
+                                    <div class="w-36 md:w-56 h-36 md:h-56 mx-auto overflow-hidden bg-cover">
+                                        <img class="w-full h-full object-contain" src="../images/default-testimonial.svg">
+                                    </div>
+                                    <div class="text-center">
+                                        <h1 class="text-sm md:text-base lg:text-lg text-slate-800 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                                        <p class="text-xs md:text-sm lg:text-base text-gray-500 font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="w-fit mx-auto">
+                                        <a href="order.html">
+                                            <button class="flex mx-auto gap-3 bg-[#37B7C3] py-2 px-5 md:px-6 rounded-md">
+                                                <svg class="w-4 md:w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                                                    <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                                                    <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                                                    <path d="M9 17.5H15" stroke-linecap="round"/>
+                                                    <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                                                    <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                                                    <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
+                                                </svg>
+                                                <h1 class="text-xs md:text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Order</h1>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Default End -->
                         </div>
                     </div>
                 </div>

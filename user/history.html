@@ -190,8 +190,8 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-5 w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
-        <div class="w-full relative bg-transparent space-y-2">
+    <!-- <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-5 w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
+        <div class="w-full relative bg-transparent space-y-3 md:space-y-2">
             <div x-data="{ isOpen: false }" class="relative flex justify-center">
                 <button @click="isOpen = true" class="absolute top-0 right-0 bg-gray-500 p-2 lg:p-[10px] rounded-full cursor-pointer">
                     <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,6 @@
                     <div class="flex items-center justify-center p-1 h-screen">
                     <span aria-hidden="true"></span>
 
-                    <!-- Pembungkus -->
                     <div class="md:ml-64 transition-all transform bg-white p-5 space-y-3 md:rounded-lg">
                         <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
                             <div class="flex justify-normal items-center gap-2 md:gap-3">
@@ -296,13 +295,11 @@
                     <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">70,000.00</h1>
                 </div>
                 <div class="w-fit">
-                    <a href="detail-project.html">
+                    <a href="detail-history.html">
                         <button class="flex justify-normal items-center gap-2 bg-gray-500 py-1.5 px-5 md:px-6 rounded-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[1.5] stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke-linecap="round"/>
+                                <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
                             </svg>
                             <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
                         </button>
@@ -310,7 +307,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full relative bg-transparent space-y-2">
+        <div class="w-full relative bg-transparent space-y-3 md:space-y-2">
             <div x-data="{ isOpen: false }" class="relative flex justify-center">
                 <button @click="isOpen = true" class="absolute top-0 right-0 bg-purple-500 p-2 lg:p-[10px] rounded-full cursor-pointer">
                     <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +330,6 @@
                     <div class="flex items-center justify-center p-1 h-screen">
                     <span aria-hidden="true"></span>
 
-                    <!-- Pembungkus -->
                     <div class="md:ml-64 transition-all transform bg-white p-5 space-y-3 md:rounded-lg">
                         <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
                             <div class="flex justify-normal items-center gap-2 md:gap-3">
@@ -415,13 +411,11 @@
                     <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">70,000.00</h1>
                 </div>
                 <div class="w-fit">
-                    <a href="detail-project.html">
+                    <a href="detail-history.html">
                         <button class="flex justify-normal items-center gap-2 bg-purple-500 py-1.5 px-5 md:px-6 rounded-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[1.5] stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke-linecap="round"/>
+                                <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
                             </svg>
                             <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
                         </button>
@@ -429,7 +423,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full relative bg-transparent space-y-2">
+        <div class="w-full relative bg-transparent space-y-3 md:space-y-2">
             <div x-data="{ isOpen: false }" class="relative flex justify-center">
                 <button @click="isOpen = true" class="absolute top-0 right-0 bg-[#37B7C3] p-2 lg:p-[10px] rounded-full cursor-pointer">
                     <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -452,7 +446,6 @@
                     <div class="flex items-center justify-center p-1 h-screen">
                     <span aria-hidden="true"></span>
 
-                    <!-- Pembungkus -->
                     <div class="md:ml-64 transition-all transform bg-white p-5 space-y-3 md:rounded-lg">
                         <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
                             <div class="flex justify-normal items-center gap-2 md:gap-3">
@@ -534,13 +527,11 @@
                     <h1 class="text-xs md:text-sm text-slate-800 font-medium capitalize">70,000.00</h1>
                 </div>
                 <div class="w-fit">
-                    <a href="detail-project.html">
+                    <a href="detail-history.html">
                         <button class="flex justify-normal items-center gap-2 bg-[#37B7C3] py-1.5 px-5 md:px-6 rounded-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[0.1] stroke-white" fill="#fff" viewBox="0 0 24 24" stroke="currentColor">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C9.65685 1 11 2.34315 11 4V8C11 9.65685 9.65685 11 8 11H4C2.34315 11 1 9.65685 1 8V4C1 2.34315 2.34315 1 4 1H8ZM8 3C8.55228 3 9 3.44772 9 4V8C9 8.55228 8.55228 9 8 9H4C3.44772 9 3 8.55228 3 8V4C3 3.44772 3.44772 3 4 3H8Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C9.65685 13 11 14.3431 11 16V20C11 21.6569 9.65685 23 8 23H4C2.34315 23 1 21.6569 1 20V16C1 14.3431 2.34315 13 4 13H8ZM8 15C8.55228 15 9 15.4477 9 16V20C9 20.5523 8.55228 21 8 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H8Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H16C14.3431 1 13 2.34315 13 4V8C13 9.65685 14.3431 11 16 11H20C21.6569 11 23 9.65685 23 8V4ZM21 4C21 3.44772 20.5523 3 20 3H16C15.4477 3 15 3.44772 15 4V8C15 8.55228 15.4477 9 16 9H20C20.5523 9 21 8.55228 21 8V4Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C21.6569 13 23 14.3431 23 16V20C23 21.6569 21.6569 23 20 23H16C14.3431 23 13 21.6569 13 20V16C13 14.3431 14.3431 13 16 13H20ZM20 15C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H16C15.4477 21 15 20.5523 15 20V16C15 15.4477 15.4477 15 16 15H20Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 stroke-[1.5] stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke-linecap="round"/>
+                                <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
                             </svg>
                             <h1 class="text-xs md:text-sm text-white font-medium capitalize">Lihat</h1>
                         </button>
@@ -548,8 +539,40 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Content End -->
+
+    <!-- Default Start -->
+    <section class="md:ml-64">
+        <div class="flex items-center justify-center h-screen">
+            <div class="space-y-3 md:space-y-4 lg:space-y-5 p-10">
+                <div class="w-36 md:w-56 h-36 md:h-56 mx-auto overflow-hidden bg-cover">
+                    <img class="w-full h-full object-contain" src="../images/default-history.svg">
+                </div>
+                <div class="text-center">
+                    <h1 class="text-sm md:text-base lg:text-lg text-slate-800 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                    <p class="text-xs md:text-sm lg:text-base text-gray-500 font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="w-fit mx-auto">
+                    <a href="order.html">
+                        <button class="flex mx-auto gap-3 bg-[#37B7C3] py-2 px-5 md:px-6 rounded-md">
+                            <svg class="w-4 md:w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                                <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                                <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                                <path d="M9 17.5H15" stroke-linecap="round"/>
+                                <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                                <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                                <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
+                            </svg>
+                            <h1 class="text-xs md:text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Order</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Defalut End -->
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

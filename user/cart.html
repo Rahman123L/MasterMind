@@ -190,8 +190,8 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-5 w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
-        <div class="w-full relative bg-transparent space-y-2">
+    <!-- <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-5 w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
+        <div class="w-full relative bg-transparent space-y-3 md:space-y-2">
             <div x-data="{ isOpen: false }" class="relative flex justify-center">
                 <button @click="isOpen = true" class="absolute top-0 right-0 bg-gray-500 p-2 lg:p-[10px] rounded-full cursor-pointer">
                     <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,6 @@
                     <div class="flex items-center justify-center p-1 h-screen">
                     <span aria-hidden="true"></span>
 
-                    <!-- Pembungkus -->
                     <div class="md:ml-64 transition-all transform bg-white p-5 space-y-3 md:rounded-lg">
                         <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
                             <div class="flex justify-normal items-center gap-2 md:gap-3">
@@ -309,7 +308,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full relative bg-transparent space-y-2">
+        <div class="w-full relative bg-transparent space-y-3 md:space-y-2">
             <div x-data="{ isOpen: false }" class="relative flex justify-center">
                 <button @click="isOpen = true" class="absolute top-0 right-0 bg-purple-500 p-2 lg:p-[10px] rounded-full cursor-pointer">
                     <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -332,7 +331,6 @@
                     <div class="flex items-center justify-center p-1 h-screen">
                     <span aria-hidden="true"></span>
 
-                    <!-- Pembungkus -->
                     <div class="md:ml-64 transition-all transform bg-white p-5 space-y-3 md:rounded-lg">
                         <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
                             <div class="flex justify-normal items-center gap-2 md:gap-3">
@@ -427,7 +425,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full relative bg-transparent space-y-2">
+        <div class="w-full relative bg-transparent space-y-3 md:space-y-2">
             <div x-data="{ isOpen: false }" class="relative flex justify-center">
                 <button @click="isOpen = true" class="absolute top-0 right-0 bg-[#37B7C3] p-2 lg:p-[10px] rounded-full cursor-pointer">
                     <svg class="w-[18px] md:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -450,7 +448,6 @@
                     <div class="flex items-center justify-center p-1 h-screen">
                     <span aria-hidden="true"></span>
 
-                    <!-- Pembungkus -->
                     <div class="md:ml-64 transition-all transform bg-white p-5 space-y-3 md:rounded-lg">
                         <div class="w-full sm:w-[80%] md:w-[70%] bg-white bg-opacity-30 md:p-2 space-y-1">
                             <div class="flex justify-normal items-center gap-2 md:gap-3">
@@ -545,8 +542,35 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Content End -->
+
+    <!-- Default Start -->
+    <section class="md:ml-64">
+        <div class="flex items-center justify-center h-screen">
+            <div class="space-y-3 md:space-y-4 lg:space-y-5 p-10">
+                <div class="w-36 md:w-56 h-36 md:h-56 mx-auto overflow-hidden bg-cover">
+                    <img class="w-full h-full object-contain" src="../images/default-cart.svg">
+                </div>
+                <div class="text-center">
+                    <h1 class="text-sm md:text-base lg:text-lg text-slate-800 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                    <p class="text-xs md:text-sm lg:text-base text-gray-500 font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="w-fit mx-auto">
+                    <a href="project.html">
+                        <button class="flex mx-auto gap-3 bg-[#37B7C3] py-2 px-5 md:px-6 rounded-md">
+                            <svg class="w-4 md:w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.35912 7.02646 8.43977 6.72546 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.669 7.04708 21.565 7.81304 21.2766 9" stroke-linecap="round"/>
+                                <path d="M3.27222 16.647C3.87647 18.9021 4.17859 20.0296 4.86351 20.7609C5.40432 21.3383 6.10421 21.7424 6.87466 21.922C7.85044 22.1495 8.97798 21.8474 11.2331 21.2432C13.4881 20.6389 14.6157 20.3368 15.347 19.6519C15.8399 19.1902 16.2065 18.6126 16.415 17.9741M8.51621 6.44531C8.16368 6.53646 7.77741 6.63996 7.35077 6.75428C5.09569 7.35853 3.96815 7.66065 3.23687 8.34557C2.65945 8.88638 2.25537 9.58627 2.07573 10.3567C1.91482 11.0468 2.01883 11.8129 2.30728 13" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h1 class="text-xs md:text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Project</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Defalut End -->
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
