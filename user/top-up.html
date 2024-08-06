@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body class="bg-[#EBF4F6]">
@@ -106,7 +107,7 @@
                     <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Dashboard</h1>
                 </button>
             </a>
-            <a href="top-up.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+            <a href="top-up.html" class="relative w-full group transform transition duration-500 bg-[#37B7C3] py-2 px-4 rounded-lg">
                 <button class="flex justify-normal items-center gap-3">
                     <div class="relative">
                         <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-black" fill="none" stroke="currentColor" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +121,7 @@
                         </svg>
                         <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
                     </div>
-                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Top Up</h1>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Top Up</h1>
                 </button>
             </a>
             <a href="project.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
@@ -177,10 +178,10 @@
                     <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">History</h1>
                 </button>
             </a>
-            <a href="inbox.html" class="relative w-full group transform transition duration-500 bg-[#37B7C3] py-2 px-4 rounded-lg">
+            <a href="inbox.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
                 <button class="flex justify-normal items-center gap-3">
                     <div class="relative">
-                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 13H5.16026C6.06543 13 6.51802 13 6.91584 13.183C7.31367 13.3659 7.60821 13.7096 8.19729 14.3968L8.80271 15.1032C9.39179 15.7904 9.68633 16.1341 10.0842 16.317C10.482 16.5 10.9346 16.5 11.8397 16.5H12.1603C13.0654 16.5 13.518 16.5 13.9158 16.317C14.3137 16.1341 14.6082 15.7904 15.1973 15.1032L15.8027 14.3968C16.3918 13.7096 16.6863 13.3659 17.0842 13.183C17.482 13 17.9346 13 18.8397 13H22" stroke-linecap="round"/>
                             <path d="M8 7H16" stroke-linecap="round"/>
                             <path d="M10 10.5H14" stroke-linecap="round"/>
@@ -188,7 +189,7 @@
                         </svg>
                         <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
                     </div>
-                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Inbox</h1>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Inbox</h1>
                 </button>
             </a>
             <hr class="h-px bg-gray-200">
@@ -207,95 +208,8 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <!-- <section class="grid gap-4 w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
-        <a href="#" class="w-full flex justify-normal gap-3 bg-white bg-opacity-50 px-6 py-4 rounded-lg">
-            <span class="">
-                <svg class="w-7 md:w-11 stroke-[1.5] stroke-[#37B7C3]" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 17V11" stroke-linecap="round"/>
-                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)"/>
-                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
-                        stroke-linecap="round"/>
-                </svg>
-            </span>
-            <div class="space-y-1">
-                <div class="">
-                    <h1 class="text-sm md:text-base font-medium text-gray-600">Lorem, ipsum dolor.</h1>
-                    <p class="w-full lg:w-[70%] text-xs md:text-sm font-normal text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nesciunt qui cupiditate nisi ea molestias, illum doloremque voluptates recusandae quaerat?</p>
-                </div>
-                <div class="flex justify-normal items-center gap-2">
-                    <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
-                    </svg>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal capitalize">8 Januari 2024</h1>
-                </div>
-            </div>
-        </a>
+    <!-- <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
         
-        <a href="#" class="relative w-full flex justify-normal gap-3 bg-white bg-opacity-50 px-6 py-4 rounded-lg">
-            <span class="">
-                <svg class="w-7 md:w-11 stroke-[1.5] stroke-green-500" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke-linecap="round"/>
-                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
-                        stroke-linecap="round"/>
-                </svg>
-            </span>
-            <div class="space-y-1">
-                <div class="">
-                    <h1 class="text-sm md:text-base font-medium text-gray-600">Lorem, ipsum dolor.</h1>
-                    <p class="w-full lg:w-[70%] text-xs md:text-sm font-normal text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nesciunt qui cupiditate nisi ea molestias, illum doloremque voluptates recusandae quaerat?</p>
-                </div>
-                <div class="flex justify-normal items-center gap-2">
-                    <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
-                    </svg>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal capitalize">8 Januari 2024</h1>
-                </div>
-            </div>
-            <button class="absolute right-[-8px] top-[-8px] cursor-pointer">
-                <div class="bg-gray-400 rounded-full">
-                    <svg class="w-5 md:w-6 stroke-[1.5] stroke-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke-linecap="round"/>
-                    </svg>
-                </div>
-            </button>
-        </a>
-        
-        <a href="#" class="relative w-full flex justify-normal gap-3 bg-white bg-opacity-50 px-6 py-4 rounded-lg">
-            <span class="">
-                <svg class="w-7 md:w-11 stroke-[1.5] stroke-red-500" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-linecap="round"/>
-                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
-                        stroke-linecap="round"/>
-                </svg>
-            </span>
-            <div class="space-y-1">
-                <div class="">
-                    <h1 class="text-sm md:text-base font-medium text-gray-600">Lorem, ipsum dolor.</h1>
-                    <p class="w-full lg:w-[70%] text-xs md:text-sm font-normal text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nesciunt qui cupiditate nisi ea molestias, illum doloremque voluptates recusandae quaerat?</p>
-                </div>
-                <div class="flex justify-normal items-center gap-2">
-                    <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 8V12L14.5 14.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
-                    </svg>
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal capitalize">8 Januari 2024</h1>
-                </div>
-            </div>
-            <button class="absolute right-[-8px] top-[-8px] cursor-pointer">
-                <div class="bg-gray-400 rounded-full">
-                    <svg class="w-5 md:w-6 stroke-[1.5] stroke-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke-linecap="round"/>
-                    </svg>
-                </div>
-            </button>
-        </a>
     </section> -->
     <!-- Content End -->
 
@@ -304,7 +218,7 @@
         <div class="flex items-center justify-center h-screen">
             <div class="space-y-3 md:space-y-4 lg:space-y-5 p-10">
                 <div class="w-36 md:w-56 h-36 md:h-56 mx-auto overflow-hidden bg-cover">
-                    <img class="w-full h-full object-contain" src="../images/default-inbox.svg">
+                    <img class="w-full h-full object-contain" src="../images/default-top-up.svg">
                 </div>
                 <div class="text-center">
                     <h1 class="text-sm md:text-base lg:text-lg text-slate-800 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
@@ -333,6 +247,9 @@
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/chart-line.js"></script>
+    <script src="../js/chart-bar.js"></script>
+    <script src="../js/chart-pie.js"></script>
     <!-- Script End -->
      
 </body>
