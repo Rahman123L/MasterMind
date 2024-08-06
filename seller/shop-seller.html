@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Mind</title>
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="images/mm.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body class="bg-[#EBF4F6]">
+
+    <!-- Navbar Start -->
+    <nav class="fixed top-0 z-50 w-full bg-white py-3 md:py-5 px-4 md:px-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="md:hidden">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex justify-normal items-center gap-2">
+                    <div class="w-[36px] lg:w-10 h-[36px] lg:h-10 object-cover">
+                        <img class="w-full h-full object-contain" src="../images/mm.svg">
+                    </div>
+                    <h1 class="md:text-sm lg:text-lg text-gray-600 font-bold"><span class="text-[#088395] font-bold">M</span>aster <span class="text-[#37B7C3] font-bold">M</span>ind</h1>
+                </div>
+            </div>
+            <div class="flex justify-normal items-center gap-5 md:gap-10">
+                <div class="flex justify-normal items-center gap-3 md:gap-5">
+                    <a href="cart.html" class="relative">
+                        <svg class="w-[18px] lg:w-6 stroke-[1.5] transform transition duration-300 stroke-slate-700 group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                        </svg>
+                        <div class="absolute bottom-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </a>
+                    <a href="order-seller.html" class="relative">
+                        <svg class="w-[18px] lg:w-6 stroke-[1.5] transform transition duration-300 stroke-slate-700 group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                            <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                            <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                            <path d="M9 17.5H15" stroke-linecap="round"/>
+                            <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                            <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                            <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute bottom-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </a>
+                    <a href="inbox.html" class="relative">
+                        <svg class="w-[18px] lg:w-6 stroke-[1.5] transform transition duration-300 stroke-slate-700 group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 13H5.16026C6.06543 13 6.51802 13 6.91584 13.183C7.31367 13.3659 7.60821 13.7096 8.19729 14.3968L8.80271 15.1032C9.39179 15.7904 9.68633 16.1341 10.0842 16.317C10.482 16.5 10.9346 16.5 11.8397 16.5H12.1603C13.0654 16.5 13.518 16.5 13.9158 16.317C14.3137 16.1341 14.6082 15.7904 15.1973 15.1032L15.8027 14.3968C16.3918 13.7096 16.6863 13.3659 17.0842 13.183C17.482 13 17.9346 13 18.8397 13H22" stroke-linecap="round"/>
+                            <path d="M8 7H16" stroke-linecap="round"/>
+                            <path d="M10 10.5H14" stroke-linecap="round"/>
+                            <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute bottom-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </a>
+                </div>
+                <a href="profile.html" class="flex justify-normal items-center gap-4">
+                    <div class="hidden md:block text-end">
+                        <h1 class="text-xs lg:text-sm text-black font-medium capitalize">Rizky Rahman Rambe</h1>
+                        <p class="text-[10px] lg:text-xs text-gray-500 font-normal">Frontend Developer</p>
+                    </div>
+
+                    <!-- Silver -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-gray-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Gold -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-yellow-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Platinum -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-blue-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Diamond -->
+                    <!-- <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-purple-500 overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div> -->
+
+                    <!-- Master Mind -->
+                    <div class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10 bg-gray-500 border-[0.5px] border-[#37B7C3] overflow-hidden bg-cover rounded-full">
+                        <img class="w-full h-full object-contain rounded-full" src="../images/avatar.jpg">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Sidebar Start -->
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen mt-14 md:mt-[76px] lg:mt-20 px-6 py-4 scrollbar-y transition transform duration-700 -translate-x-full bg-white md:translate-x-0" aria-label="Sidebar">
+        <div class="grid gap-2 md:gap-3">
+            <a href="dashboard.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 22L2 22" stroke-linecap="round"/>
+                        <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
+                        <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
+                        <path d="M4 22V9.5" stroke-linecap="round"/>
+                        <path d="M20 9.5V13.5M20 22V17.5" stroke-linecap="round"/>
+                        <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round"/>
+                        <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Dashboard</h1>
+                </button>
+            </a>
+            <a href="project.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.35912 7.02646 8.43977 6.72546 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.669 7.04708 21.565 7.81304 21.2766 9" stroke-linecap="round"/>
+                            <path d="M3.27222 16.647C3.87647 18.9021 4.17859 20.0296 4.86351 20.7609C5.40432 21.3383 6.10421 21.7424 6.87466 21.922C7.85044 22.1495 8.97798 21.8474 11.2331 21.2432C13.4881 20.6389 14.6157 20.3368 15.347 19.6519C15.8399 19.1902 16.2065 18.6126 16.415 17.9741M8.51621 6.44531C8.16368 6.53646 7.77741 6.63996 7.35077 6.75428C5.09569 7.35853 3.96815 7.66065 3.23687 8.34557C2.65945 8.88638 2.25537 9.58627 2.07573 10.3567C1.91482 11.0468 2.01883 11.8129 2.30728 13" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Project</h1>
+                </button>
+            </a>
+            <a href="order.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                            <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                            <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                            <path d="M9 17.5H15" stroke-linecap="round"/>
+                            <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                            <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                            <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Order</h1>
+                </button>
+            </a>
+            <a href="cart.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Cart</h1>
+                </button>
+            </a>
+            <a href="history.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke-linecap="round"/>
+                            <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">History</h1>
+                </button>
+            </a>
+            <a href="inbox.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 13H5.16026C6.06543 13 6.51802 13 6.91584 13.183C7.31367 13.3659 7.60821 13.7096 8.19729 14.3968L8.80271 15.1032C9.39179 15.7904 9.68633 16.1341 10.0842 16.317C10.482 16.5 10.9346 16.5 11.8397 16.5H12.1603C13.0654 16.5 13.518 16.5 13.9158 16.317C14.3137 16.1341 14.6082 15.7904 15.1973 15.1032L15.8027 14.3968C16.3918 13.7096 16.6863 13.3659 17.0842 13.183C17.482 13 17.9346 13 18.8397 13H22" stroke-linecap="round"/>
+                            <path d="M8 7H16" stroke-linecap="round"/>
+                            <path d="M10 10.5H14" stroke-linecap="round"/>
+                            <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Inbox</h1>
+                </button>
+            </a>
+            <hr class="h-px bg-gray-200">
+            <h1 class="mx-3 text-sm lg:text-base text-slate-800 font-medium md:font-semibold uppercase">Seller</h1>
+            <a href="shop-seller.html" class="relative w-full group transform transition duration-500 bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 21.5V18.5C9.5 17.5654 9.5 17.0981 9.70096 16.75C9.83261 16.522 10.022 16.3326 10.25 16.201C10.5981 16 11.0654 16 12 16C12.9346 16 13.4019 16 13.75 16.201C13.978 16.3326 14.1674 16.522 14.299 16.75C14.5 17.0981 14.5 17.5654 14.5 18.5V21.5" stroke-linecap="round"/>
+                        <path d="M21 22H9M3 22H5.5" stroke-linecap="round"/>
+                        <path d="M19 22V15" stroke-linecap="round"/>
+                        <path d="M5 22V15" stroke-linecap="round"/>
+                        <path d="M11.9999 2H7.47214C6.26932 2 5.66791 2 5.18461 2.2987C4.7013 2.5974 4.43234 3.13531 3.89443 4.21114L2.49081 7.75929C2.16652 8.57905 1.88279 9.54525 2.42867 10.2375C2.79489 10.7019 3.36257 11 3.99991 11C5.10448 11 5.99991 10.1046 5.99991 9C5.99991 10.1046 6.89534 11 7.99991 11C9.10448 11 9.99991 10.1046 9.99991 9C9.99991 10.1046 10.8953 11 11.9999 11C13.1045 11 13.9999 10.1046 13.9999 9C13.9999 10.1046 14.8953 11 15.9999 11C17.1045 11 17.9999 10.1046 17.9999 9C17.9999 10.1046 18.8953 11 19.9999 11C20.6373 11 21.205 10.7019 21.5712 10.2375C22.1171 9.54525 21.8334 8.57905 21.5091 7.75929L20.1055 4.21114C19.5676 3.13531 19.2986 2.5974 18.8153 2.2987C18.332 2 17.7306 2 16.5278 2H16" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Shop</h1>
+                </button>
+            </a>
+            <a href="order-seller.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16.0002C21 18.8286 21 20.2429 20.1213 21.1215C19.2426 22.0002 17.8284 22.0002 15 22.0002H9C6.17157 22.0002 4.75736 22.0002 3.87868 21.1215C3 20.2429 3 18.8286 3 16.0002V13.0002" stroke-linecap="round"/>
+                            <path d="M16 4.00195C18.175 4.01406 19.3529 4.11051 20.1213 4.87889C21 5.75757 21 7.17179 21 10.0002V12.0002" stroke-linecap="round"/>
+                            <path d="M8 4.00195C5.82497 4.01406 4.64706 4.11051 3.87868 4.87889C3.11032 5.64725 3.01385 6.82511 3.00174 9" stroke-linecap="round"/>
+                            <path d="M9 17.5H15" stroke-linecap="round"/>
+                            <path d="M8 3.5C8 2.67157 8.67157 2 9.5 2H14.5C15.3284 2 16 2.67157 16 3.5V4.5C16 5.32843 15.3284 6 14.5 6H9.5C8.67157 6 8 5.32843 8 4.5V3.5Z" stroke-width="1.5"/>
+                            <path d="M8 14H9M16 14H12" stroke-linecap="round"/>
+                            <path d="M17 10.5H15M12 10.5H7" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Order</h1>
+                </button>
+            </a>
+            <a href="history-seller.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
+                <button class="flex justify-normal items-center gap-3">
+                    <div class="relative">
+                        <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke-linecap="round"/>
+                            <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute top-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">History</h1>
+                </button>
+            </a>
+            <hr class="h-px bg-gray-200">
+            <a href="../index.html">
+                <button class="w-full py-2 px-4 flex items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
+                    <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 12L6 12M6 12L8 14M6 12L8 10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 21.9827C10.4465 21.9359 9.51995 21.7626 8.87865 21.1213C8.11027 20.3529 8.01382 19.175 8.00171 17M16 21.9983C18.175 21.9862 19.3529 21.8897 20.1213 21.1213C21 20.2426 21 18.8284 21 16V14V10V8C21 5.17157 21 3.75736 20.1213 2.87868C19.2426 2 17.8284 2 15 2H14C11.1715 2 9.75733 2 8.87865 2.87868C8.11027 3.64706 8.01382 4.82497 8.00171 7" stroke-linecap="round"/>
+                        <path d="M3 9.5V14.5C3 16.857 3 18.0355 3.73223 18.7678C4.46447 19.5 5.64298 19.5 8 19.5M3.73223 5.23223C4.46447 4.5 5.64298 4.5 8 4.5" stroke-linecap="round"/>
+                    </svg>
+                    <h1 class="text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-gray-500 group-hover:text-white group-focus:text-white">Logout</h1>
+                </button>
+            </a>
+        </div>
+    </aside>
+    <!-- Sidebar End -->
+    
+    <!-- Content Start -->
+    <!-- <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 space-y-5 md:space-y-8 lg:space-y-12 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
+        
+    </section> -->
+    <!-- Content End -->
+
+    <!-- Default Start -->
+    <section class="md:ml-64">
+        <div class="flex items-center justify-center h-screen">
+            <div class="space-y-3 md:space-y-4 lg:space-y-5 p-10">
+                <div class="w-36 md:w-56 h-36 md:h-56 mx-auto overflow-hidden bg-cover">
+                    <img class="w-full h-full object-contain" src="../images/default-inbox.svg">
+                </div>
+                <div class="text-center">
+                    <h1 class="text-sm md:text-base lg:text-lg text-slate-800 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                    <p class="text-xs md:text-sm lg:text-base text-gray-500 font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="w-fit mx-auto">
+                    <a href="dashboard.html">
+                        <button class="flex mx-auto gap-3 bg-[#37B7C3] py-2 px-5 md:px-6 rounded-md">
+                            <svg class="w-4 md:w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 22L2 22" stroke-linecap="round"/>
+                                <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-linecap="round"/>
+                                <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5" stroke-linecap="round"/>
+                                <path d="M4 22V9.5" stroke-linecap="round"/>
+                                <path d="M20 9.5V13.5M20 22V17.5" stroke-linecap="round"/>
+                                <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17" stroke-linecap="round"/>
+                                <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"/>
+                            </svg>
+                            <h1 class="text-xs md:text-sm lg:text-base font-medium md:font-semibold transform transition duration-300 text-white">Dashboard</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Defalut End -->
+
+    <!-- Script Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script End -->
+     
+</body>
+</html>
