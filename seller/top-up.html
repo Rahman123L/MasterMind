@@ -56,7 +56,7 @@
                         </svg>
                         <div class="absolute bottom-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
                     </a>
-                    <a href="inbox.html" class="relative">
+                    <a href="inbox-seller.html" class="relative">
                         <svg class="w-[18px] lg:w-6 stroke-[1.5] transform transition duration-300 stroke-slate-700 group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 13H5.16026C6.06543 13 6.51802 13 6.91584 13.183C7.31367 13.3659 7.60821 13.7096 8.19729 14.3968L8.80271 15.1032C9.39179 15.7904 9.68633 16.1341 10.0842 16.317C10.482 16.5 10.9346 16.5 11.8397 16.5H12.1603C13.0654 16.5 13.518 16.5 13.9158 16.317C14.3137 16.1341 14.6082 15.7904 15.1973 15.1032L15.8027 14.3968C16.3918 13.7096 16.6863 13.3659 17.0842 13.183C17.482 13 17.9346 13 18.8397 13H22" stroke-linecap="round"/>
                             <path d="M8 7H16" stroke-linecap="round"/>
@@ -137,7 +137,7 @@
                 </button>
             </a>
             <hr class="h-px bg-gray-200">
-            <div x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
+            <div class="grid gap-2 md:gap-3" x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
                 <button x-model="selectedOption" @click="isOpen = !isOpen" class="w-full py-2 px-4 flex justify-between items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
                     <div class="w-full flex justify-normal items-center gap-3">
                         <div class="relative">
@@ -154,7 +154,7 @@
                     </svg>
                 </button>
         
-                <div x-show="isOpen" class="pt-3 grid grid-2 md:gap-3">
+                <div x-show="isOpen" class="grid space-y-2 md:space-y-3">
                     <a href="project.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
                         <button class="flex justify-normal items-center gap-3">
                             <div class="relative">
@@ -226,7 +226,7 @@
                 </button>
             </a>
             <hr class="h-px bg-gray-200">
-            <div x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
+            <div class="grid gap-2 md:gap-3" x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
                 <button x-model="selectedOption" @click="isOpen = !isOpen" class="w-full py-2 px-4 flex justify-between items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
                     <div class="w-full flex justify-normal items-center gap-3">
                         <div class="relative">
@@ -243,7 +243,7 @@
                     </svg>
                 </button>
         
-                <div x-show="isOpen" class="pt-3 grid grid-2 md:gap-3">
+                <div x-show="isOpen" class="grid space-y-2 md:space-y-3">
                     <a href="shop-seller.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
                         <button class="flex justify-normal items-center gap-3">
                             <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -317,7 +317,7 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <section class="relative w-full sm:w-[80%] md:w-auto mx-auto -mt-16 md:mt-[76px] lg:mt-20 md:ml-64">
+    <!-- <section class="relative w-full sm:w-[80%] md:w-auto mx-auto -mt-16 md:mt-[76px] lg:mt-20 md:ml-64">
         <div class="absolute z-20 top-[15rem] md:top-[16rem] lg:top-[20rem] w-full bg-[#EBF4F6]">
             <div class="flex justify-center">
                 <div class="absolute -top-20 w-20 md:w-[7rem] lg:w-[10rem] h-20 md:h-[7rem] lg:h-[10rem]">
@@ -337,20 +337,27 @@
                 </div>
             </div>
             <div class="w-[90%] md:w-[70%] mx-auto space-y-5 my-[6rem] sm:my-[7rem] md:my-[4rem] lg:my-[8rem]">
-                <div class="bg-white py-3 px-7 lg:px-10 rounded-lg space-y-1">
-                    <div class="text-xs md:text-sm lg:text-base text-slate-500 font-medium">Saldo Koin</div>
-                    <div class="flex justify-normal items-center gap-2">
-                        <svg class="w-6 md:w-8 h-6 md:h-8" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="118.489" y="179.449" width="49.2188" height="178.101" fill="#eab308"/>
-                            <path d="M119.244 199.967L118.554 131.245L275.084 262.59L243.994 299.642L119.244 199.967Z" fill="#eab308"/>
-                            <path d="M367.856 130L367.356 199.761L241.968 299.884L210.33 262.18L367.856 130Z" fill="#eab308"/>
-                            <circle cx="243.5" cy="243.5" r="236" stroke="#eab308" stroke-width="20"/>
-                            <path d="M317.394 179.449H366.612V357.55H317.394V179.449Z" fill="#eab308"/>
-                            <rect x="192.571" y="139.871" width="25.8779" height="190.279" fill="#eab308"/>
-                            <rect x="267.16" y="139.871" width="25.8779" height="190.279" fill="#eab308"/>
-                        </svg>
-                        <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
+                <div class="flex justify-between items-center gap-3 bg-white py-3 px-7 lg:px-10 rounded-lg">
+                    <div class="space-y-1">
+                        <div class="text-xs md:text-sm lg:text-base text-slate-500 font-medium">Saldo Koin</div>
+                        <div class="flex justify-normal items-center gap-2">
+                            <svg class="w-6 md:w-8 h-6 md:h-8" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="118.489" y="179.449" width="49.2188" height="178.101" fill="#eab308"/>
+                                <path d="M119.244 199.967L118.554 131.245L275.084 262.59L243.994 299.642L119.244 199.967Z" fill="#eab308"/>
+                                <path d="M367.856 130L367.356 199.761L241.968 299.884L210.33 262.18L367.856 130Z" fill="#eab308"/>
+                                <circle cx="243.5" cy="243.5" r="236" stroke="#eab308" stroke-width="20"/>
+                                <path d="M317.394 179.449H366.612V357.55H317.394V179.449Z" fill="#eab308"/>
+                                <rect x="192.571" y="139.871" width="25.8779" height="190.279" fill="#eab308"/>
+                                <rect x="267.16" y="139.871" width="25.8779" height="190.279" fill="#eab308"/>
+                            </svg>
+                            <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
+                        </div>
                     </div>
+                    <svg class="w-5 lg:w-6 stroke-[1.5] stroke-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 17V11" stroke-linecap="round"/>
+                        <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)"/>
+                        <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                    </svg>
                 </div>
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     <button class="bg-white border md:border-[1.5px] hover:border-yellow-500 focus:border-yellow-500 p-5 rounded-lg">
@@ -367,7 +374,7 @@
                                 </svg>
                                 <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
                             </div>
-                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27.000,00</div>
+                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27,000.00</div>
                         </div>
                     </button>
                     <button class="bg-white border md:border-[1.5px] hover:border-yellow-500 focus:border-yellow-500 p-5 rounded-lg">
@@ -384,7 +391,7 @@
                                 </svg>
                                 <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
                             </div>
-                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27.000,00</div>
+                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27,000.00</div>
                         </div>
                     </button>
                     <button class="bg-white border md:border-[1.5px] hover:border-yellow-500 focus:border-yellow-500 p-5 rounded-lg">
@@ -401,7 +408,7 @@
                                 </svg>
                                 <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
                             </div>
-                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27.000,00</div>
+                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27,000.00</div>
                         </div>
                     </button>
                     <button class="bg-white border md:border-[1.5px] hover:border-yellow-500 focus:border-yellow-500 p-5 rounded-lg">
@@ -418,7 +425,7 @@
                                 </svg>
                                 <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
                             </div>
-                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27.000,00</div>
+                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27,000.00</div>
                         </div>
                     </button>
                     <button class="bg-white border md:border-[1.5px] hover:border-yellow-500 focus:border-yellow-500 p-5 rounded-lg">
@@ -435,7 +442,7 @@
                                 </svg>
                                 <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
                             </div>
-                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27.000,00</div>
+                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27,000.00</div>
                         </div>
                     </button>
                     <button class="bg-white border md:border-[1.5px] hover:border-yellow-500 focus:border-yellow-500 p-5 rounded-lg">
@@ -452,12 +459,12 @@
                                 </svg>
                                 <h1 class="text-base md:text-lg lg:text-xl text-slate-800 font-medium">10</h1>
                             </div>
-                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27.000,00</div>
+                            <div class="text-center text-xs md:text-sm lg:text-base text-gray-500 font-normal">Rp 27,000.00</div>
                         </div>
                     </button>
                 </div>
                 <div class="space-y-2">
-                    <h1 class="text-sm md:text-base lg:text-lg text-slate-800">Total <span class="font-medium">Rp 27.000,00</span></h1>
+                    <h1 class="text-sm md:text-base lg:text-lg text-slate-800">Total <span class="font-medium">Rp 27,000.00</span></h1>
                     <button class="w-fit bg-[#37B7C3] py-2 px-6 md:px-8 rounded-md">
                         <h1 class="text-xs md:text-sm lg:text-base text-white font-medium capitalize">Isi Ulang</h1>
                     </button>
@@ -467,8 +474,134 @@
         <div class="absolute z-10 top-0 w-full h-[13rem] md:h-[15rem] lg:h-[20rem] overflow-hidden">
             <img class="w-full h-full object-cover md:bg-cover" src="../images/background.svg">
         </div>
-    </section>
+    </section> -->
     <!-- Content End -->
+
+    <!-- Payment Berhasil Start -->
+    <section class="md:ml-64">
+        <div class="flex justify-center items-center h-screen p-5">
+            <div class="bg-white p-5 md:p-7 space-y-7 rounded-lg">
+                <div class="w-full space-y-4">
+                    <div class="w-fit mx-auto bg-[#088395] p-1 rounded-full ring-4 ring-[#37B7C3] ring-opacity-50 animate-pulse">
+                        <svg class="w-10 lg:w-12 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.38 12L10.79 14.42L15.62 9.57996" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="text-sm md:text-base text-slate-800 font-medium">Top Up Berhasil</h1>
+                        <p class="text-[10px] md:text-xs text-gray-500 font-normal">8 Agustus 2024, 18:30 WIB</p>
+                    </div>
+                </div>
+                <div class="w-full bg-white/80 space-y-3">
+                    <div class="grid grid-cols-2 gap-3 gap-y-2">
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                    </div>
+                    <hr class="h-px bg-gray-200">
+                    <div class="grid grid-cols-2 gap-3 gap-y-2">
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Total</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Rp 27,000.00</span>
+                    </div>
+                    <div class="">
+                        <a href="dashboard.html">
+                            <button class="w-full bg-[#37B7C3] py-1.5 md:py-2 px-6 rounded-sm">
+                                <h1 class="text-xs md:text-sm text-white font-medium capitalize">Kembali Dashboard</h1>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Payment Berhasil End -->
+
+    <!-- Payment Diproses Start -->
+    <!-- <section class="md:ml-64">
+        <div class="flex justify-center items-center h-screen p-5">
+            <div class="bg-white p-5 md:p-7 space-y-7 rounded-lg">
+                <div class="w-full space-y-4">
+                    <div class="w-fit mx-auto bg-gray-700 p-1 rounded-full ring-4 ring-gray-600 ring-opacity-50 animate-pulse">
+                        <svg class="w-10 lg:w-12 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L8.79689 11.8437C9.50894 10.9893 9.86496 10.562 10.3333 10.562C10.8017 10.562 11.1577 10.9893 11.8698 11.8437L12.1302 12.1563C12.8423 13.0107 13.1983 13.438 13.6667 13.438C14.135 13.438 14.4911 13.0107 15.2031 12.1563L17 10" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="text-sm md:text-base text-slate-800 font-medium">Top Up Diproses</h1>
+                        <p class="text-[10px] md:text-xs text-gray-500 font-normal">8 Agustus 2024, 18:30 WIB</p>
+                    </div>
+                </div>
+                <div class="w-full bg-white/80 space-y-3">
+                    <div class="grid grid-cols-2 gap-3 gap-y-2">
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                    </div>
+                    <hr class="h-px bg-gray-200">
+                    <div class="grid grid-cols-2 gap-3 gap-y-2">
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Total</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Rp 27,000.00</span>
+                    </div>
+                    <div class="">
+                        <a href="dashboard.html">
+                            <button class="w-full bg-gray-500 py-1.5 md:py-2 px-6 rounded-sm">
+                                <h1 class="text-xs md:text-sm text-white font-medium capitalize">Kembali Dashboard</h1>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Payment Diproses End -->
+
+    <!-- Payment Dibatalkan Start -->
+    <!-- <section class="md:ml-64">
+        <div class="flex justify-center items-center h-screen p-5">
+            <div class="bg-white p-5 md:p-7 space-y-7 rounded-lg">
+                <div class="w-full space-y-4">
+                    <div class="w-fit mx-auto bg-red-700 p-1 rounded-full ring-4 ring-red-600 ring-opacity-50 animate-pulse">
+                        <svg class="w-10 lg:w-12 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="text-sm md:text-base text-slate-800 font-medium">Top Up Dibatalkan</h1>
+                        <p class="text-[10px] md:text-xs text-gray-500 font-normal">8 Agustus 2024, 18:30 WIB</p>
+                    </div>
+                </div>
+                <div class="w-full bg-white/80 space-y-3">
+                    <div class="grid grid-cols-2 gap-3 gap-y-2">
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                    </div>
+                    <hr class="h-px bg-gray-200">
+                    <div class="grid grid-cols-2 gap-3 gap-y-2">
+                        <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Total</span>
+                        <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Rp 27,000.00</span>
+                    </div>
+                    <div class="">
+                        <a href="dashboard.html">
+                            <button class="w-full bg-red-500 py-1.5 md:py-2 px-6 rounded-sm">
+                                <h1 class="text-xs md:text-sm text-white font-medium capitalize">Kembali Dashboard</h1>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Payment Dibatalkan End -->
 
     <!-- Default Start -->
     <!-- <section class="md:ml-64">

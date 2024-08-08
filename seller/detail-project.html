@@ -55,7 +55,7 @@
                         </svg>
                         <div class="absolute bottom-0 right-0 bg-red-500 p-[3.5px] md:p-[4.5px] shadow-sm shadow-red-500 rounded-full animate-pulse"></div>
                     </a>
-                    <a href="inbox.html" class="relative">
+                    <a href="inbox-seller.html" class="relative">
                         <svg class="w-[18px] lg:w-6 stroke-[1.5] transform transition duration-300 stroke-slate-700 group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 13H5.16026C6.06543 13 6.51802 13 6.91584 13.183C7.31367 13.3659 7.60821 13.7096 8.19729 14.3968L8.80271 15.1032C9.39179 15.7904 9.68633 16.1341 10.0842 16.317C10.482 16.5 10.9346 16.5 11.8397 16.5H12.1603C13.0654 16.5 13.518 16.5 13.9158 16.317C14.3137 16.1341 14.6082 15.7904 15.1973 15.1032L15.8027 14.3968C16.3918 13.7096 16.6863 13.3659 17.0842 13.183C17.482 13 17.9346 13 18.8397 13H22" stroke-linecap="round"/>
                             <path d="M8 7H16" stroke-linecap="round"/>
@@ -136,7 +136,7 @@
                 </button>
             </a>
             <hr class="h-px bg-gray-200">
-            <div x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
+            <div class="grid gap-2 md:gap-3" x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
                 <button x-model="selectedOption" @click="isOpen = !isOpen" class="w-full py-2 px-4 flex justify-between items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
                     <div class="w-full flex justify-normal items-center gap-3">
                         <div class="relative">
@@ -153,7 +153,7 @@
                     </svg>
                 </button>
     
-                <div x-show="isOpen" class="pt-3 grid grid-2 md:gap-3">
+                <div x-show="isOpen" class="grid space-y-2 md:space-y-3">
                     <a href="project.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
                         <button class="flex justify-normal items-center gap-3">
                             <div class="relative">
@@ -225,7 +225,7 @@
                 </button>
             </a>
             <hr class="h-px bg-gray-200">
-            <div x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
+            <div class="grid gap-2 md:gap-3" x-data="{ isOpen : false, selectedOption: '' }" @click.away="isOpen = false">
                 <button x-model="selectedOption" @click="isOpen = !isOpen" class="w-full py-2 px-4 flex justify-between items-center gap-3 group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] rounded-lg">
                     <div class="w-full flex justify-normal items-center gap-3">
                         <div class="relative">
@@ -242,7 +242,7 @@
                     </svg>
                 </button>
     
-                <div x-show="isOpen" class="pt-3 grid grid-2 md:gap-3">
+                <div x-show="isOpen" class="grid space-y-2 md:space-y-3">
                     <a href="shop-seller.html" class="relative w-full group transform transition duration-500 hover:bg-[#37B7C3] focus:bg-[#37B7C3] py-2 px-4 rounded-lg">
                         <button class="flex justify-normal items-center gap-3">
                             <svg class="w-[18px] lg:w-5 stroke-[1.5] transform transition duration-300 stroke-[#37B7C3] group-hover:stroke-white group-focus:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
