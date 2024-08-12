@@ -329,7 +329,7 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <!-- <section class="relative w-full sm:w-[80%] md:w-auto mx-auto -mt-16 md:mt-[76px] lg:mt-20 md:ml-64">
+    <section class="relative w-full sm:w-[80%] md:w-auto mx-auto -mt-16 md:mt-[76px] lg:mt-20 md:ml-64">
         <div class="absolute z-20 top-[15rem] md:top-[16rem] lg:top-[20rem] w-full bg-[#EBF4F6]">
             <div class="flex justify-center">
                 <div class="absolute -top-20 w-20 md:w-[7rem] lg:w-[10rem] h-20 md:h-[7rem] lg:h-[10rem]">
@@ -477,20 +477,134 @@
                 </div>
                 <div class="space-y-2">
                     <h1 class="text-sm md:text-base lg:text-lg text-slate-800">Total <span class="font-medium">Rp 27,000.00</span></h1>
-                    <button class="w-fit bg-[#37B7C3] py-2 px-6 md:px-8 rounded-md">
-                        <h1 class="text-xs md:text-sm lg:text-base text-white font-medium capitalize">Isi Ulang</h1>
-                    </button>
+                    <div x-data="{ isOpen: false }" class="">
+                        <button @click="isOpen = true" class="w-fit bg-[#37B7C3] py-2 px-6 md:px-8 rounded-md">
+                            <h1 class="text-xs md:text-sm lg:text-base text-white font-medium capitalize">Isi Ulang</h1>
+                        </button>
+                        <div x-show="isOpen"
+                        x-transition:enter="transition duration-300 ease-out"
+                        x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                        x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+                        x-transition:leave="transition duration-150 ease-in"
+                        x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+                        x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+                        class="fixed inset-0 z-20 overflow-y-auto bg-zinc-800 bg-opacity-80"
+                        aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                        <div class="flex items-center justify-center p-1 h-screen">
+                        <span aria-hidden="true"></span>
+
+                        <!-- Payment Berhasil -->
+                        <div class="md:ml-64 transition-all transform bg-white p-5 md:p-7 space-y-7 rounded-lg">
+                            <div class="w-full space-y-4">
+                                <div class="w-fit mx-auto bg-[#088395] p-1 rounded-full ring-4 ring-[#37B7C3] ring-opacity-50 animate-pulse">
+                                    <svg class="w-10 lg:w-12 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.38 12L10.79 14.42L15.62 9.57996" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="text-sm md:text-base text-slate-800 font-medium">Top Up Berhasil</h1>
+                                    <p class="text-[10px] md:text-xs text-gray-500 font-normal">8 Agustus 2024, 18:30 WIB</p>
+                                </div>
+                            </div>
+                            <div class="w-full bg-white/80 space-y-3">
+                                <div class="grid grid-cols-2 gap-3 gap-y-2">
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                </div>
+                                <hr class="h-px bg-gray-200">
+                                <div class="grid grid-cols-2 gap-3 gap-y-2">
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Total</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Rp 27,000.00</span>
+                                </div>
+                                <button @click="isOpen = false" class="w-full bg-[#37B7C3] py-1.5 md:py-2 px-6 rounded-sm">
+                                    <h1 class="text-xs md:text-sm text-white font-medium capitalize">Kembali</h1>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Payment Proses -->
+                        <!-- <div class="md:ml-64 transition-all transform bg-white p-5 md:p-7 space-y-7 rounded-lg">
+                            <div class="w-full space-y-4">
+                                <div class="w-fit mx-auto bg-gray-700 p-1 rounded-full ring-4 ring-gray-600 ring-opacity-50 animate-pulse">
+                                    <svg class="w-10 lg:w-12 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 14L8.79689 11.8437C9.50894 10.9893 9.86496 10.562 10.3333 10.562C10.8017 10.562 11.1577 10.9893 11.8698 11.8437L12.1302 12.1563C12.8423 13.0107 13.1983 13.438 13.6667 13.438C14.135 13.438 14.4911 13.0107 15.2031 12.1563L17 10" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="text-sm md:text-base text-slate-800 font-medium">Top Up Diproses</h1>
+                                    <p class="text-[10px] md:text-xs text-gray-500 font-normal">8 Agustus 2024, 18:30 WIB</p>
+                                </div>
+                            </div>
+                            <div class="w-full bg-white/80 space-y-3">
+                                <div class="grid grid-cols-2 gap-3 gap-y-2">
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                </div>
+                                <hr class="h-px bg-gray-200">
+                                <div class="grid grid-cols-2 gap-3 gap-y-2">
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Total</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Rp 27,000.00</span>
+                                </div>
+                                <button @click="isOpen = false" class="w-full bg-gray-500 py-1.5 md:py-2 px-6 rounded-sm">
+                                    <h1 class="text-xs md:text-sm text-white font-medium capitalize">Kembali</h1>
+                                </button>
+                            </div>
+                        </div> -->
+
+                        <!-- Payment Dibatalkan -->
+                        <!-- <div class="md:ml-64 transition-all transform bg-white p-5 md:p-7 space-y-7 rounded-lg">
+                            <div class="w-full space-y-4">
+                                <div class="w-fit mx-auto bg-red-700 p-1 rounded-full ring-4 ring-red-600 ring-opacity-50 animate-pulse">
+                                    <svg class="w-10 lg:w-12 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="text-sm md:text-base text-slate-800 font-medium">Top Up Dibatalkan</h1>
+                                    <p class="text-[10px] md:text-xs text-gray-500 font-normal">8 Agustus 2024, 18:30 WIB</p>
+                                </div>
+                            </div>
+                            <div class="w-full bg-white/80 space-y-3">
+                                <div class="grid grid-cols-2 gap-3 gap-y-2">
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Lorem, ipsum</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Lorem, ipsum dolor</span>
+                                </div>
+                                <hr class="h-px bg-gray-200">
+                                <div class="grid grid-cols-2 gap-3 gap-y-2">
+                                    <span class="text-start text-xs md:text-sm text-gray-500 font-normal">Total</span>
+                                    <span class="text-end text-xs md:text-sm text-slate-800 font-medium">Rp 27,000.00</span>
+                                </div>
+                                <button @click="isOpen = false" class="w-full bg-red-500 py-1.5 md:py-2 px-6 rounded-sm">
+                                    <h1 class="text-xs md:text-sm text-white font-medium capitalize">Kembali</h1>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="absolute z-10 top-0 w-full h-[13rem] md:h-[15rem] lg:h-[20rem] overflow-hidden">
             <img class="w-full h-full object-cover md:bg-cover" src="../images/background.svg">
         </div>
-    </section> -->
+    </section>
     <!-- Content End -->
 
     <!-- Payment Berhasil Start -->
-    <section class="md:ml-64">
+    <!-- <section class="md:ml-64">
         <div class="flex justify-center items-center h-screen p-5">
             <div class="bg-white p-5 md:p-7 space-y-7 rounded-lg">
                 <div class="w-full space-y-4">
@@ -528,7 +642,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Payment Berhasil End -->
 
     <!-- Payment Diproses Start -->
