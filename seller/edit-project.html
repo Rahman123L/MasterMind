@@ -331,11 +331,11 @@
     <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64">
         <form action="" method="" class="w-full sm:w-[80%] lg:w-[50%] mx-auto md:mx-0 bg-white p-5 space-y-1 md:space-y-2 lg:space-y-3 rounded md:rounded-md">
             <div class="w-full h-[10rem] mx-auto overflow-hidden">
-                <img id="image-preview" class="w-full h-full object-contain" src="../images/test.png"/>
+                <img id="image-preview2" class="w-full h-full object-contain" src="../images/tailwindcss.png"/>
             </div>
             <div class="grid gap-y-3 w-full lg:w-[90%] py-3 mx-auto">
-                <label for="file">
-                    <input id="file" type="file" class="hidden" onchange="previewImage(event)"/>
+                <label for="image">
+                    <input id="image" type="file" class="hidden" onchange="previewImage(event, 'image-preview2')"/>
                     <div class="border-[0.5px] border-dashed py-4 px-6 rounded md:rounded-md space-y-2">
                         <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-[#37B7C3] mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 10V6C4 4.89543 4.89543 4 6 4H12M4.02693 18.329C4.18385 19.277 5.0075 20 6 20H18C19.1046 20 20 19.1046 20 18V14.1901M4.02693 18.329C4.00922 18.222 4 18.1121 4 18V15M4.02693 18.329L7.84762 14.5083C8.52765 13.9133 9.52219 13.8481 10.274 14.3494L10.7832 14.6888C11.5078 15.1719 12.4619 15.1305 13.142 14.5864L15.7901 12.4679C16.4651 11.9279 17.4053 11.8855 18.1228 12.3484C18.2023 12.3997 18.2731 12.4632 18.34 12.5301L20 14.1901M20 14.1901V6C20 4.89543 19.1046 4 18 4H17M11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9Z" stroke-linecap="round" stroke-linejoin="round"/>
@@ -348,11 +348,39 @@
                     <h1 class="peer-focus:text-[#088395] order-1 transition-colors duration-300 mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Deskripsi</h1>
                     <p class="peer-focus:text-gray-700 order-3 transition-colors duration-300 mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
                 </label>
-                <label class="grid gap-1">
-                    <input type="text" value="Keikhlasan" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
-                    <h1 class="peer-focus:text-[#088395] order-1 transition-colors duration-300 mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Point Keunggulan</h1>
-                    <p class="peer-focus:text-gray-700 order-3 transition-colors mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                </label>          
+                <label x-data="pointManager()" class="space-y-3">
+                    <div class="flex justify-start items-center gap-3">
+                        <div class="w-full grid gap-1">
+                            <input type="text" x-model="newPoint" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                            <h1 class="peer-focus:text-[#088395] order-1 transition-colors duration-300 mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Point Keunggulan</h1>
+                            <p class="peer-focus:text-gray-700 order-4 transition-colors duration-300 mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Maksimal 25 karakter.</p>
+                        </div>
+                        <button @click="addPoint" class="bg-[#37B7C3] py-1.5 md:py-2 px-3 md:mt-1 rounded md:rounded-md">
+                            <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" stroke-linecap="round"/>
+                                <path d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="point-list mx-1 space-y-1">
+                        <p x-text="errorMessage" class="text-[10px] md:text-xs text-red-500 font-normal"></p>
+                        <h1 class="text-xs md:text-sm text-slate-700 font-medium capitalize">Daftar Point</h1>
+                        <template x-for="(point, index) in points" :key="index">
+                            <div class="point-item flex justify-between items-center gap-3 border-b-[0.5px] border-slate-100 py-1">
+                                <span x-text="point" class="w-full text-xs md:text-sm text-gray-500 font-normal capitalize"></span>
+                                <button @click="removePoint(index)">
+                                    <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5001 6H3.5" stroke-linecap="round"/>
+                                        <path d="M9.5 11L10 16" stroke-linecap="round"/>
+                                        <path d="M14.5 11L14 16" stroke-linecap="round"/>
+                                        <path d="M6.5 6C6.55588 6 6.58382 6 6.60915 5.99936C7.43259 5.97849 8.15902 5.45491 8.43922 4.68032C8.44784 4.65649 8.45667 4.62999 8.47434 4.57697L8.57143 4.28571C8.65431 4.03708 8.69575 3.91276 8.75071 3.8072C8.97001 3.38607 9.37574 3.09364 9.84461 3.01877C9.96213 3 10.0932 3 10.3553 3H13.6447C13.9068 3 14.0379 3 14.1554 3.01877C14.6243 3.09364 15.03 3.38607 15.2493 3.8072C15.3043 3.91276 15.3457 4.03708 15.4286 4.28571L15.5257 4.57697C15.5433 4.62992 15.5522 4.65651 15.5608 4.68032C15.841 5.45491 16.5674 5.97849 17.3909 5.99936C17.4162 6 17.4441 6 17.5 6"/>
+                                        <path d="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </template>
+                    </div>
+                </label>   
                 <label class="grid gap-1">
                     <select class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0">
                         <option class="bg-white text-gray-500 font-light capitalize" value="" disabled selected>Status Project</option>
@@ -397,6 +425,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/profile.js"></script>
     <script src="../js/checkbox.js"></script>
+    <script src="../js/add-input.js"></script>
     <!-- Script End -->
      
 </body>

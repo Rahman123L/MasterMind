@@ -32,7 +32,7 @@
             <div class="w-full sm:w-[70%] md:w-full grid grid-cols-1 lg:grid-cols-2 p-5 gap-5">
                 <div class="w-full flex justify-normal items-center h-screen">
                     <div class="w-full md:w-[50%] mx-auto">
-                        <form action="" method="" class="space-y-5">
+                        <form action="" method="" class="grid gap-y-3">
                             <div class="w-full">
                                 <div class="w-20 lg:w-24 h-20 lg:h-24 object-cover mx-auto">
                                     <img class="w-full h-full object-contain" src="images/mm.svg">
@@ -44,24 +44,26 @@
                                 <a href="seller/dashboard.html" class="text-sm md:text-base text-slate-700 font-medium hover:underline hover:text-[#088395] capitalize">Seller</a>
                                 <a href="user/dashboard.html" class="text-sm md:text-base text-slate-700 font-medium hover:underline hover:text-[#088395] capitalize">User</a>
                             </div>
-                            <div class="w-full">
-                                <label class="space-y-1">
-                                    <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Username/Email</h1>
-                                    <input type="text" placeholder="Username atau Email" required autocomplete="off" autofocus class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
-                                    <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                            <label class="grid gap-1">
+                                <input type="text" placeholder="Username atau Email" required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                <h1 class="peer-focus:text-[#088395] order-1 transition-colors mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Username/Email</h1>
+                                <p class="peer-focus:text-gray-700 order-3 transition-colors mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                            </label>
+                            <label class="grid gap-1">
+                                <input type="password" placeholder="**********" required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
+                                <h1 class="peer-focus:text-[#088395] order-1 transition-colors mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Password</h1>
+                                <p class="peer-focus:text-gray-700 order-3 transition-colors mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
+                            </label>
+                            <div class="space-y-2">
+                                <label class="flex justify-normal items-center gap-2">
+                                    <input type="checkbox" class="peer/checkbox inputCheckbox appearance-none checked:bg-[#37B7C3] rounded-md border-[#37B7C3] checked:border-[#37B7C3] ring-[#37B7C3] checked:ring-[#37B7C3]">
+                                    <h1 class="text-xs md:text-sm text-gray-500 peer-checked/checkbox:text-[#37B7C3] font-medium">Lorem ipsum dolor sit amet.</h1>
                                 </label>
+                                <button class="submitButton relative group w-full bg-[#37B7C3] py-2 md:py-2.5 px-5 rounded-md opacity-50 cursor-not-allowed" disabled>
+                                    <h1 class="relative z-10 text-sm md:text-base text-white font-medium uppercase">Masuk</h1>
+                                    <div class="absolute inset-0 bg-gradient-to-r from-[#088395] rounded-md h-full w-0 transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                                </button>
                             </div>
-                            <div class="w-full">
-                                <label class="space-y-1">
-                                    <h1 class="mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Password</h1>
-                                    <input type="password" placeholder="**********" required autocomplete="off" class="w-full text-sm md:text-base text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-2.5 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
-                                    <p class="mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                                </label>
-                            </div>
-                            <button type="submit" class="relative group w-full bg-[#37B7C3] py-2 md:py-2.5 px-5 rounded-md">
-                                <h1 class="relative z-10 text-sm md:text-base text-white font-medium uppercase">Masuk</h1>
-                                <div class="absolute inset-0 bg-gradient-to-r from-[#088395] rounded-md h-full w-0 transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                            </button>
                             <div class="text-center">
                                 <h1 class="text-[10px] md:text-xs text-gray-500 font-normal">Belum Punya Akun? <a href="registrasi.html" class="hover:underline hover:text-[#088395]">Registrasi</a></h1>
                                 <h1 class="text-[10px] md:text-xs text-gray-500 font-normal">Ingin <a href="index.html" class="hover:underline hover:text-[#088395]">Kembali?</a></h1>
@@ -77,6 +79,7 @@
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/checkbox.js"></script>
     <!-- Script End --> 
  
 </body>

@@ -1,9 +1,9 @@
-function previewImage(event) {
+function previewImage(event, previewId) {
     const input = event.target;
     const reader = new FileReader();
 
-    reader.onload = function(){
-        const preview = document.getElementById('image-preview');
+    reader.onload = function() {
+        const preview = document.getElementById(previewId);
         preview.src = reader.result;
     }
 
