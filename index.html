@@ -744,9 +744,16 @@
                     <label for="message" class="text-xs md:text-sm text-gray-600 font-medium">Pesan</label>
                     <textarea id="message" name="message" required autocomplete="off" class="w-full bg-white rounded border-[0.5px] border-gray-300 h-32 sm-base focus:border-[#37B7C3] focus:outline-none text-gray-700 font-normal py-1.5 px-5 resize-none transition-colors duration-200 ease-in-out"></textarea>
                 </div>
-                <button class="bg-gradient-to-r from-[#088395] to-[#37B7C3] text-center py-1.5 px-6 md:px-10 rounded-md">
-                    <h1 class="text-xs md:text-sm lg:text-base text-white font-medium uppercase">Kirim</h1>
-                </button>
+                <div class="space-y-2">
+                    <label class="flex justify-normal items-center gap-2">
+                        <input type="checkbox" class="peer/checkbox inputCheckbox appearance-none checked:bg-[#37B7C3] rounded-md border-[#37B7C3] checked:border-[#37B7C3] ring-[#37B7C3] checked:ring-[#37B7C3]">
+                        <h1 class="text-xs md:text-sm text-gray-500 peer-checked/checkbox:text-[#37B7C3] font-medium">Sudah Mengisi seluruh formulir dan memastikan semua sudah sesuai.</h1>
+                    </label>
+                    <button class="submitButton relative group w-full bg-[#37B7C3] py-2 px-5 rounded-md opacity-50 cursor-not-allowed" disabled>
+                        <h1 class="relative z-10 text-sm md:text-base text-white font-medium uppercase">Masukan</h1>
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#088395] rounded-md h-full w-0 transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                    </button>
+                </div>
             </form>
         </div>
     </section>
@@ -768,6 +775,7 @@
 
     <!-- Script Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/checkbox.js"></script>
     <!-- Script End -->
      
 </body>
