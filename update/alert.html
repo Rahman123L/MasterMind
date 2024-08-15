@@ -207,7 +207,7 @@
     <!-- Sidebar End -->
     
     <!-- Content Start -->
-    <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64 space-y-3 md:space-y-4">
+    <section class="w-full sm:w-[80%] md:w-auto mx-auto p-4 md:p-8 mt-14 md:mt-[76px] lg:mt-20 md:ml-64 space-y-4">
         <div class="w-full sm:w-[80%] lg:w-[50%] mx-auto md:mx-0 flex justify-normal items-start gap-2 md:gap-3 bg-red-500 bg-opacity-15 p-5 rounded md:rounded-md">
             <span class="">
                 <svg class="w-[18px] md:w-7 stroke-[1.5] stroke-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -237,69 +237,21 @@
                 </div>
             </div>
         </div>
-        <form action="" method="" class="w-full sm:w-[80%] lg:w-[50%] mx-auto md:mx-0 bg-white p-5 space-y-5 md:space-y-6 rounded md:rounded-md">
-            <div class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto border md:border-2 border-purple-500 rounded-full overflow-hidden">
-                <label for="file">
-                    <div class="absolute w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 ml-[55px] md:ml-[70px] lg:ml-[80px] mt-[56px] md:mt-[66px] lg:mt-[76px] bg-white bg-opacity-80 p-0.5 rounded-full cursor-pointer">
-                        <svg class="stroke-[1.5] stroke-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <input id="file" type="file" class="hidden" onchange="previewImage(event, 'image-preview1')"/>
-                </label>
-                <img id="image-preview1" class="w-full h-full object-cover rounded-full" src="../images/avatar.jpg"/>
-            </div>
-            <div class="grid gap-y-3 w-full lg:w-[90%] mx-auto">
-                <label class="grid gap-1">
-                    <input type="text" value="Rizky Rahman Rambe" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
-                    <h1 class="peer-focus:text-[#088395] order-1 transition-colors mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Nama User</h1>
-                    <p class="peer-focus:text-gray-700 order-3 transition-colors mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                </label>
-                <label class="grid gap-1">
-                    <textarea type="text" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full resize-none text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>Aku Ingin Pahala</textarea>
-                    <h1 class="peer-focus:text-[#088395] order-1 transition-colors duration-300 mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Bio User</h1>
-                    <p class="peer-focus:text-gray-700 order-3 transition-colors duration-300 mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                </label>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <label class="grid gap-1">
-                        <input type="number" value="082363838328" inputmode="numeric" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
-                        <h1 class="peer-focus:text-[#088395] order-1 transition-colors mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Nomor Whatsapp User</h1>
-                        <p class="peer-focus:text-gray-700 order-3 transition-colors mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                    </label>
-                    <label class="grid gap-1">
-                        <input type="email" value="rizkyrambe98@gmail.com" inputmode="email" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>
-                        <h1 class="peer-focus:text-[#088395] order-1 transition-colors mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Email User</h1>
-                        <p class="peer-focus:text-gray-700 order-3 transition-colors mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                    </label>
-                </div>
-                <label class="grid gap-1">
-                    <textarea type="text" placeholder=". . . . ." required autocomplete="off" class="peer order-2 transition-colors duration-500 w-full resize-none text-xs md:text-sm text-gray-500 placeholder:text-xs md:placeholder:text-sm bg-white px-5 py-1.5 md:py-2 border-[0.5px] border-gray-200 focus:border-[#37B7C3] rounded-md focus:outline-none focus:ring-0"/>Sumatra Utara, Labuhanbatu, Rantauprapat, Sigambal</textarea>
-                    <h1 class="peer-focus:text-[#088395] order-1 transition-colors duration-300 mx-1 text-xs md:text-sm text-slate-800 font-medium capitalize">Alamat User</h1>
-                    <p class="peer-focus:text-gray-700 order-3 transition-colors duration-300 mx-1 text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet.</p>
-                </label>
-                <div class="w-full h-[10rem] mx-auto overflow-hidden">
-                    <img id="image-preview2" class="w-full h-full object-contain" src="../images/background.svg"/>
-                </div>
-                <label for="image">
-                    <input id="image" type="file" class="hidden" onchange="previewImage(event, 'image-preview2')"/>
-                    <div class="border-[0.5px] border-dashed py-4 px-6 rounded md:rounded-md space-y-2">
-                        <svg class="w-[18px] lg:w-5 stroke-[1.5] stroke-[#37B7C3] mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 10V6C4 4.89543 4.89543 4 6 4H12M4.02693 18.329C4.18385 19.277 5.0075 20 6 20H18C19.1046 20 20 19.1046 20 18V14.1901M4.02693 18.329C4.00922 18.222 4 18.1121 4 18V15M4.02693 18.329L7.84762 14.5083C8.52765 13.9133 9.52219 13.8481 10.274 14.3494L10.7832 14.6888C11.5078 15.1719 12.4619 15.1305 13.142 14.5864L15.7901 12.4679C16.4651 11.9279 17.4053 11.8855 18.1228 12.3484C18.2023 12.3997 18.2731 12.4632 18.34 12.5301L20 14.1901M20 14.1901V6C20 4.89543 19.1046 4 18 4H17M11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9Z" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <h1 class="text-center text-xs md:text-sm text-gray-500 font-medium">Upload Image</h1>
-                    </div>
-                </label>
-                <div class="space-y-2">
-                    <label class="flex justify-normal items-center gap-2">
-                        <input type="checkbox" class="peer/checkbox inputCheckbox appearance-none checked:bg-[#37B7C3] rounded-md border-[#37B7C3] checked:border-[#37B7C3] ring-[#37B7C3] checked:ring-[#37B7C3]">
-                        <h1 class="text-xs md:text-sm text-gray-500 peer-checked/checkbox:text-[#37B7C3] font-medium">Lorem ipsum dolor sit amet.</h1>
-                    </label>
-                    <button class="submitButton w-full bg-[#37B7C3] py-1.5 md:py-2 px-4 rounded-md opacity-50 cursor-not-allowed" disabled>
-                        <h1 class="text-xs md:text-sm text-white font-medium uppercase">Ubah Profile</h1>
-                    </button>
+        <div class="w-full sm:w-[80%] lg:w-[50%] mx-auto md:mx-0 flex justify-normal items-start gap-2 md:gap-3 bg-blue-500 bg-opacity-15 p-5 rounded md:rounded-md">
+            <span class="">
+                <svg class="w-[18px] md:w-7 stroke-[1.5] stroke-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 17V11" stroke-linecap="round"/>
+                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)"/>
+                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <div class="space-y-3 md:space-y-4">
+                <div class="text-start">
+                    <h1 class="text-xs md:text-sm lg:text-base text-blue-500 font-medium capitalize">Lorem ipsum dolor sit amet.</h1>
+                    <p class="w-full sm:w-[80%] text-[10px] md:text-xs lg:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, assumenda?</p>
                 </div>
             </div>
-        </form>
+        </div>
     </section>
     <!-- Content End -->
 
